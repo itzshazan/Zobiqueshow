@@ -1,4 +1,5 @@
-import { Reveal } from '../../hooks'
+import { useRef } from 'react'
+import { gsap, useGSAP, reducedMotion } from '../../lib/gsap'
 import { marquee, PLATFORM_URL, LABS_URL } from '../../data/content'
 import LogoLoop from '../ui/LogoLoop'
 
@@ -64,24 +65,45 @@ const cards = [
 ]
 
 export default function Hero() {
+  const scope = useRef(null)
+
+  useGSAP(() => {
+    const quick = reducedMotion()
+    const tl = gsap.timeline({ defaults: { ease: 'power4.out', duration: quick ? 0.5 : 1.1 } })
+
+    // Each headline line rises out of its own mask
+    tl.from('.hero h1 .line-in', { yPercent: 110, stagger: 0.12 })
+      .from('.hero-lede', { y: 24, opacity: 0, duration: 0.9 }, '-=0.75')
+      .from('.hero-card', { y: 60, opacity: 0, stagger: 0.12, duration: 1 }, '-=0.6')
+
+    // The line drawings sketch themselves in once the cards have landed
+    const paths = gsap.utils.toArray('.hero-art path')
+    paths.forEach((p) => {
+      const len = p.getTotalLength()
+      gsap.set(p, { strokeDasharray: len, strokeDashoffset: len })
+    })
+    tl.to(paths, { strokeDashoffset: 0, duration: quick ? 0.6 : 1.4, ease: 'power2.inOut', stagger: 0.02 }, '-=0.5')
+      .from('.loop.clients', { opacity: 0, y: 16, duration: 0.8 }, '-=1.2')
+  }, { scope })
+
   return (
-    <>
+    <div ref={scope}>
       <header className="hero" id="top">
         <div className="wrap">
           <div className="hero-top">
-            <Reveal as="h1">
-              Turning Skills into Careers
-              <span>and Workflows into Systems</span>
-            </Reveal>
-            <Reveal as="p" className="hero-lede">
+            <h1>
+              <span className="line"><span className="line-in">Turning Skills into Careers</span></span>
+              <span className="line accent"><span className="line-in">and Workflows into Systems</span></span>
+            </h1>
+            <p className="hero-lede">
               <b>Zobique is an AI company.</b> We build career intelligence for students and universities, and
               production AI systems for the businesses that hire them.
-            </Reveal>
+            </p>
           </div>
 
           <div className="hero-cards">
             {cards.map(({ name, body, href, Art, variant }) => (
-              <Reveal as="a" key={name} href={href} target="_blank" rel="noopener" className={`hero-card ${variant}`}>
+              <a key={name} href={href} target="_blank" rel="noopener" className={`hero-card ${variant}`}>
                 <div>
                   <h2>
                     {name}
@@ -92,13 +114,13 @@ export default function Hero() {
                   <p>{body}</p>
                 </div>
                 <Art />
-              </Reveal>
+              </a>
             ))}
           </div>
         </div>
       </header>
 
       <LogoLoop label="Trusted by teams at" logos={marquee} variant="clients" speed={45} />
-    </>
+    </div>
   )
 }

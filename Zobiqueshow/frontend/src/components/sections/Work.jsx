@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
+import { gsap, useGSAP, reducedMotion } from '../../lib/gsap'
 import { Reveal } from '../../hooks'
 import { LABS_URL, companies } from '../../data/content'
 import SectionHead from '../ui/SectionHead'
@@ -14,15 +15,29 @@ function CompanyCard({ name, desc, img, tags }) {
           ? <img src={img} alt={`${name} logo`} loading="lazy" onError={() => setBroken(true)} />
           : <span className="txt">{name}</span>}
       </div>
-      <div><h5>{name}</h5><div className="desc">{desc}</div></div>
+      {/* When the logo is just the name in text, don't repeat it underneath */}
+      <div>{img && !broken && <h5>{name}</h5>}<div className="desc">{desc}</div></div>
       <div className="tags">{tags.map((t) => <span key={t} className={tagClass(t)}>{t}</span>)}</div>
     </Reveal>
   )
 }
 
 export default function Work() {
+  const scope = useRef(null)
+
+  useGSAP(() => {
+    if (reducedMotion()) return
+    // The screenshot drifts inside its browser frame as the page scrolls past
+    gsap.fromTo('.case-shot img', { yPercent: -6, scale: 1.13 }, {
+      yPercent: 6,
+      scale: 1.13,
+      ease: 'none',
+      scrollTrigger: { trigger: '.case-shot', start: 'top bottom', end: 'bottom top', scrub: true },
+    })
+  }, { scope })
+
   return (
-    <section className="sec" id="work" style={{ borderTop: 0 }}>
+    <section ref={scope} className="sec" id="work" style={{ borderTop: 0 }}>
       <div className="wrap">
         <SectionHead title="Shipped, live and in production.">
           From a government-scale deployment to the startups building on top of us.

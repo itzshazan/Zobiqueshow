@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
+import { gsap, useGSAP } from '../../lib/gsap'
 import { Reveal } from '../../hooks'
 import { LABS_URL, PLATFORM_URL, testimonials, faqs, contacts, socials } from '../../data/content'
 import SectionHead from '../ui/SectionHead'
@@ -56,13 +57,28 @@ export function Faq() {
 }
 
 export function Contact() {
+  const scope = useRef(null)
+
+  useGSAP(() => {
+    gsap.from('.cta h2 .line-in', {
+      yPercent: 110,
+      duration: 1.1,
+      ease: 'power4.out',
+      stagger: 0.12,
+      scrollTrigger: { trigger: '.cta h2', start: 'top 80%' },
+    })
+  }, { scope })
+
   return (
-    <section className="cta" id="contact">
+    <section ref={scope} className="cta" id="contact">
       <div className="wrap">
-        <Reveal as="h2">
-          Tell us the workflow<br />costing you time.<br />
-          <a href={LABS_URL} target="_blank" rel="noopener">Book a call →</a>
-        </Reveal>
+        <h2>
+          <span className="line"><span className="line-in">Tell us the workflow</span></span>
+          <span className="line"><span className="line-in">costing you time.</span></span>
+          <span className="line">
+            <a className="line-in" href={LABS_URL} target="_blank" rel="noopener">Book a call →</a>
+          </span>
+        </h2>
         <Reveal as="ul" className="contacts">
           {contacts.map((c) => (
             <li key={c.value}>
@@ -82,8 +98,20 @@ export function Contact() {
 const ext = { target: '_blank', rel: 'noopener' }
 
 export function Footer() {
+  const scope = useRef(null)
+
+  useGSAP(() => {
+    gsap.from('.wordmark span', {
+      yPercent: 100,
+      duration: 1,
+      ease: 'power4.out',
+      stagger: 0.05,
+      scrollTrigger: { trigger: '.wordmark', start: 'top 95%' },
+    })
+  }, { scope })
+
   return (
-    <footer>
+    <footer ref={scope}>
       <div className="wrap">
         <div className="foot">
           <div>
@@ -113,7 +141,10 @@ export function Footer() {
             </ul>
           </div>
         </div>
-        <div className="wordmark" aria-hidden="true">zobique<span>.</span></div>
+        <div className="wordmark" aria-hidden="true">
+          {'zobique'.split('').map((ch, i) => <span key={i}>{ch}</span>)}
+          <span className="dot">.</span>
+        </div>
         <div className="legal mono muted">
           <span>© {new Date().getFullYear()} Zobique. All rights reserved.</span>
           <span>

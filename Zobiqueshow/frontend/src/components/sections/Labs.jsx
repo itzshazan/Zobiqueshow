@@ -1,12 +1,42 @@
-import { Reveal, useInView } from '../../hooks'
+import { useRef } from 'react'
+import { Reveal } from '../../hooks'
+import { gsap, useGSAP, reducedMotion } from '../../lib/gsap'
 import { LABS_URL, labsServices, solutions, process, specs } from '../../data/content'
 import SectionHead from '../ui/SectionHead'
 
-// Four phases on one track; the line fills in as it scrolls into view
+// Four phases on one track; the line fills as you scroll through it
 function Timeline() {
-  const [ref, inView] = useInView(0.3)
+  const scope = useRef(null)
+
+  useGSAP(() => {
+    if (reducedMotion()) {
+      gsap.set('.tl-track i', { scaleX: 1 })
+    } else {
+      gsap.fromTo('.tl-track i', { scaleX: 0 }, {
+        scaleX: 1,
+        ease: 'none',
+        scrollTrigger: { trigger: scope.current, start: 'top 80%', end: 'bottom 55%', scrub: 0.6 },
+      })
+    }
+    gsap.from('.tl-phases > li', {
+      y: 40,
+      opacity: 0,
+      duration: 0.9,
+      ease: 'power3.out',
+      stagger: 0.15,
+      scrollTrigger: { trigger: scope.current, start: 'top 75%' },
+    })
+    gsap.from('.tl-node', {
+      scale: 0,
+      duration: 0.5,
+      ease: 'back.out(3)',
+      stagger: 0.15,
+      scrollTrigger: { trigger: scope.current, start: 'top 75%' },
+    })
+  }, { scope })
+
   return (
-    <div ref={ref} className={`timeline ${inView ? 'in' : ''}`}>
+    <div ref={scope} className="timeline">
       <div className="tl-span">
         <span>Week 0</span>
         <span className="tl-span-mid">2–16 weeks to production</span>
@@ -14,8 +44,8 @@ function Timeline() {
       </div>
       <div className="tl-track"><i /></div>
       <ol className="tl-phases">
-        {process.map((p, i) => (
-          <li key={p.title} style={{ transitionDelay: `${300 + i * 150}ms` }}>
+        {process.map((p) => (
+          <li key={p.title}>
             <span className="tl-node" />
             <h4>{p.title}</h4>
             <ul>{p.items.map((it) => <li key={it}>{it}</li>)}</ul>
