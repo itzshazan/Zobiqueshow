@@ -1,0 +1,636 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zobique Showcase</title>
+<meta name="description" content="Zobique and Zobique Labs: an AI career intelligence platform and a studio that builds production AI systems for business.">
+<link rel="icon" href="https://www.zobique.com/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a0a0a; --bg-2:#121212; --bg-3:#1a1a1a;
+  --fg:#f4f1ea; --muted:#9b978f; --line:#2a2826;
+  --orange:#ff5a1f; --orange-2:#ffa31a; --cream:#fffdf2; --yellow:#ffe066;
+  --green:#3ddc84;
+  --sans:"Inter Tight",system-ui,sans-serif; --mono:"JetBrains Mono",ui-monospace,monospace;
+  --gutter:clamp(16px,4vw,48px); --max:1360px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font-family:var(--sans);line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+.mono{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.muted{color:var(--muted)}
+.o{color:var(--orange)}
+section{border-top:1px solid var(--line)}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:50;background:rgba(10,10,10,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:-.02em;font-size:18px}
+.brand img{width:28px;height:28px;border-radius:6px;background:#fff;padding:2px}
+.links{display:flex;gap:28px}
+.links a{font-size:14px;color:var(--muted);transition:color .2s}
+.links a:hover{color:var(--fg)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:999px;font-weight:600;font-size:14px;transition:transform .2s,background .2s,color .2s;white-space:nowrap}
+.btn:hover{transform:translateY(-2px)}
+.btn-o{background:var(--orange);color:#0a0a0a}
+.btn-o:hover{background:var(--orange-2)}
+.btn-g{border:1px solid var(--line);color:var(--fg)}
+.btn-g:hover{border-color:var(--fg)}
+.btn .arr{transition:transform .2s}
+.btn:hover .arr{transform:translateX(3px)}
+@media (max-width:860px){.links{display:none}}
+
+/* HERO */
+.hero{padding:clamp(64px,10vw,140px) 0 clamp(48px,6vw,80px);border-top:0;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:auto -20% -60% auto;width:900px;height:900px;background:radial-gradient(circle,rgba(255,90,31,.22),transparent 60%);pointer-events:none}
+.hero .eyebrow{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:32px}
+.chip{border:1px solid var(--line);border-radius:999px;padding:6px 12px;display:inline-flex;align-items:center;gap:8px}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 10px var(--green)}
+h1{font-size:clamp(44px,9vw,140px);line-height:.92;letter-spacing:-.05em;font-weight:800;max-width:14ch}
+h1 em{font-style:normal;color:var(--orange)}
+.hero-sub{display:grid;grid-template-columns:1fr auto;gap:32px;align-items:end;margin-top:48px}
+.hero-sub p{font-size:clamp(17px,1.6vw,21px);max-width:56ch;color:#cfcac0}
+.hero-sub .ctas{display:flex;gap:12px;flex-wrap:wrap}
+@media (max-width:760px){.hero-sub{grid-template-columns:1fr}}
+
+/* MARQUEE */
+.marquee{overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0;background:var(--bg-2)}
+.track{display:flex;gap:56px;width:max-content;animation:scroll 40s linear infinite;align-items:center}
+.marquee:hover .track{animation-play-state:paused}
+.track span{font-size:clamp(20px,2.4vw,30px);font-weight:700;letter-spacing:-.03em;color:#5d5a55;white-space:nowrap;display:flex;align-items:center;gap:56px}
+.track span::after{content:"✦";color:var(--orange);font-size:.6em}
+@keyframes scroll{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.track{animation:none}}
+
+/* SECTION HEAD */
+.sec{padding:clamp(72px,9vw,128px) 0}
+.sec-head{display:grid;grid-template-columns:200px 1fr;gap:32px;margin-bottom:56px}
+.sec-head h2{font-size:clamp(34px,5.2vw,72px);line-height:.98;letter-spacing:-.045em;font-weight:700;max-width:20ch}
+.sec-head p{margin-top:20px;font-size:18px;color:var(--muted);max-width:60ch}
+@media (max-width:760px){.sec-head{grid-template-columns:1fr;gap:12px}}
+
+/* SPLIT (two companies) */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.card-co{position:relative;border-radius:20px;padding:clamp(28px,3.5vw,48px);min-height:480px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;transition:transform .35s}
+.card-co:hover{transform:translateY(-6px)}
+.card-co.a{background:var(--orange);color:#0a0a0a}
+.card-co.b{background:var(--cream);color:#0a0a0a}
+.card-co .tag{display:inline-block;border:1px solid currentColor;border-radius:999px;padding:6px 12px;opacity:.75}
+.card-co h3{font-size:clamp(40px,5.5vw,84px);line-height:.9;letter-spacing:-.05em;font-weight:800;margin:24px 0 16px}
+.card-co p{font-size:19px;max-width:34ch;font-weight:500}
+.card-co ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+.card-co li{background:rgba(10,10,10,.08);border-radius:999px;padding:6px 12px;font-size:13px;font-weight:500}
+.card-co .go{display:flex;justify-content:space-between;align-items:center;margin-top:40px;padding-top:20px;border-top:1px solid rgba(10,10,10,.2);font-weight:600}
+.card-co .go .circ{width:52px;height:52px;border-radius:50%;background:#0a0a0a;color:var(--fg);display:grid;place-items:center;font-size:20px;transition:transform .3s}
+.card-co:hover .circ{transform:rotate(-45deg)}
+.card-co .big{position:absolute;right:-20px;bottom:-60px;font-size:320px;font-weight:800;letter-spacing:-.08em;opacity:.07;line-height:1;pointer-events:none}
+@media (max-width:860px){.split{grid-template-columns:1fr}.card-co{min-height:420px}}
+
+/* STATS */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.stat{padding:36px 28px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stat b{display:block;font-size:clamp(44px,5vw,76px);font-weight:700;letter-spacing:-.05em;line-height:1}
+.stat b sup{font-size:.45em;color:var(--orange);vertical-align:top;margin-left:2px}
+.stat span{display:block;margin-top:14px}
+.stat small{display:block;margin-top:6px;color:var(--muted);font-size:14px}
+@media (max-width:860px){.stats{grid-template-columns:1fr 1fr}}
+
+/* PLATFORM */
+.plat{display:grid;grid-template-columns:1.05fr 1fr;gap:24px;align-items:stretch}
+.tabs{display:flex;flex-direction:column;border-top:1px solid var(--line)}
+.tab{border-bottom:1px solid var(--line);padding:22px 0;cursor:pointer;background:none;border-left:0;border-right:0;border-top:0;color:inherit;text-align:left;font:inherit;width:100%}
+.tab .row{display:flex;justify-content:space-between;align-items:baseline;gap:16px}
+.tab h4{font-size:clamp(22px,2.4vw,32px);font-weight:600;letter-spacing:-.03em;color:#6b6761;transition:color .2s}
+.tab .n{color:#6b6761}
+.tab p{max-height:0;overflow:hidden;color:var(--muted);transition:max-height .4s,margin .4s;max-width:52ch}
+.tab.on h4,.tab:hover h4{color:var(--fg)}
+.tab.on .n{color:var(--orange)}
+.tab.on p{max-height:140px;margin-top:10px}
+.demo{background:var(--bg-2);border:1px solid var(--line);border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:18px}
+.demo-top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.demo h5{font-size:24px;letter-spacing:-.03em;font-weight:600}
+.scan{display:flex;align-items:center;gap:8px;color:var(--green)}
+.match{display:grid;grid-template-columns:1fr auto;gap:6px 16px;padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:var(--bg)}
+.match .r{font-weight:600}
+.match .c{color:var(--muted);font-size:14px}
+.match .pct{grid-row:span 2;align-self:center;font-family:var(--mono);font-size:20px;font-weight:500}
+.bar{grid-column:1/-1;height:3px;background:var(--line);border-radius:3px;overflow:hidden}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--orange),var(--orange-2));width:0;transition:width 1.4s cubic-bezier(.2,.8,.2,1)}
+.demo .note{font-size:12px}
+@media (max-width:960px){.plat{grid-template-columns:1fr}}
+
+.tri{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px}
+.mini{border:1px solid var(--line);border-radius:16px;padding:26px;background:var(--bg-2)}
+.mini h6{font-size:20px;font-weight:600;letter-spacing:-.02em;margin:14px 0 8px}
+.mini p{color:var(--muted);font-size:15px}
+@media (max-width:860px){.tri{grid-template-columns:1fr}}
+
+/* LABS: what we do (basement style) */
+.labs-sec{background:var(--cream);color:#0a0a0a}
+.labs-sec .muted{color:#6d6a60}
+.labs-sec section,.labs-sec .line{border-color:#e3dfcf}
+.wwd{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #d9d4c1}
+.wwd > div{padding:32px 28px 36px 0;border-bottom:1px solid #d9d4c1}
+.wwd > div:not(:nth-child(3n)){border-right:1px solid #d9d4c1}
+.wwd > div:not(:nth-child(3n+1)){padding-left:28px}
+.wwd h4{font-size:24px;letter-spacing:-.03em;font-weight:700;margin:12px 0 10px}
+.wwd p{color:#4d4a42;font-size:15px;max-width:38ch}
+@media (max-width:860px){.wwd{grid-template-columns:1fr}.wwd > div{padding:28px 0!important;border-right:0!important}}
+
+.solutions{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:56px}
+.sol{border-radius:20px;padding:32px;background:#0a0a0a;color:var(--fg)}
+.sol.alt{background:var(--orange);color:#0a0a0a}
+.sol h4{font-size:28px;letter-spacing:-.03em;font-weight:700;margin:12px 0 20px}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pills span{border:1px solid currentColor;border-radius:999px;padding:8px 14px;font-size:14px;opacity:.9}
+@media (max-width:760px){.solutions{grid-template-columns:1fr}}
+
+.process{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:16px}
+.step{border:1px solid #d9d4c1;border-radius:20px;padding:28px;background:#fff;position:relative;min-height:260px;display:flex;flex-direction:column}
+.step .num{font-size:64px;font-weight:800;letter-spacing:-.06em;line-height:1;color:var(--orange)}
+.step h4{font-size:22px;font-weight:700;letter-spacing:-.02em;margin:auto 0 10px}
+.step p{font-size:14px;color:#4d4a42}
+@media (max-width:960px){.process{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.process{grid-template-columns:1fr}}
+
+.models{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.models span{background:#0a0a0a;color:var(--fg);border-radius:10px;padding:10px 16px;font-weight:600;font-size:15px}
+
+/* FEATURED */
+.feat{display:grid;grid-template-columns:1.4fr 1fr;gap:16px}
+.feat-card{border-radius:20px;overflow:hidden;position:relative;min-height:420px;display:flex;flex-direction:column;justify-content:flex-end;padding:32px;border:1px solid var(--line);background:var(--bg-2)}
+.feat-card .bgimg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.35;transition:opacity .4s,transform .8s}
+.feat-card:hover .bgimg{opacity:.5;transform:scale(1.04)}
+.feat-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 20%,rgba(10,10,10,.92))}
+.feat-card > *:not(.bgimg){position:relative;z-index:1}
+.feat-card h4{font-size:clamp(26px,3vw,40px);letter-spacing:-.04em;line-height:1;font-weight:700;margin:14px 0 10px;max-width:22ch}
+.feat-card p{color:#cfcac0;max-width:46ch}
+.feat-card .lnk{margin-top:18px;color:var(--orange);font-weight:600}
+.feat-card.press{background:var(--orange);color:#0a0a0a;border:0}
+.feat-card.press::after{display:none}
+.feat-card.press p{color:#2a1a10}
+.feat-card.press .lnk{color:#0a0a0a}
+.feat-card.press .q{font-size:clamp(80px,10vw,150px);font-weight:800;line-height:.8;letter-spacing:-.06em;position:absolute;top:28px;left:28px;opacity:.9}
+@media (max-width:860px){.feat{grid-template-columns:1fr}}
+
+/* CLIENTS (high alpha grid) */
+.grid-co{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.co{border:1px solid var(--line);border-radius:16px;padding:22px;background:var(--bg-2);display:flex;flex-direction:column;gap:18px;min-height:190px;transition:border-color .25s,background .25s}
+.co:hover{border-color:#4a4642;background:var(--bg-3)}
+.co .logo{height:44px;display:flex;align-items:center}
+.co .logo img{max-height:44px;max-width:130px;object-fit:contain;background:#fff;border-radius:8px;padding:6px}
+.co .logo .txt{font-weight:800;font-size:22px;letter-spacing:-.04em}
+.co h5{font-size:17px;font-weight:600;letter-spacing:-.01em}
+.co .desc{font-size:14px;color:var(--muted);margin-top:4px}
+.tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:auto}
+.tags span{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;padding:4px 8px;border-radius:6px;background:var(--bg);border:1px solid var(--line);color:var(--muted)}
+.tags span.p{color:var(--orange);border-color:rgba(255,90,31,.4)}
+.tags span.l{color:var(--yellow);border-color:rgba(255,224,102,.35)}
+@media (max-width:1000px){.grid-co{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:760px){.grid-co{grid-template-columns:1fr 1fr}}
+@media (max-width:440px){.grid-co{grid-template-columns:1fr}}
+
+/* STACK */
+.stack{display:flex;flex-wrap:wrap;gap:8px;margin-top:40px}
+.stack span{border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-size:14px;color:#cfcac0}
+
+/* TESTIMONIALS */
+.testi{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.t{border:1px solid var(--line);border-radius:20px;padding:32px;display:flex;flex-direction:column;gap:28px;background:var(--bg-2)}
+.t blockquote{font-size:19px;line-height:1.45;letter-spacing:-.01em}
+.t blockquote::before{content:"“";display:block;font-size:64px;line-height:.6;color:var(--orange);font-weight:800;margin-bottom:10px}
+.t .who{margin-top:auto;display:flex;align-items:center;gap:12px;padding-top:20px;border-top:1px solid var(--line)}
+.av{width:42px;height:42px;border-radius:50%;background:var(--orange);color:#0a0a0a;display:grid;place-items:center;font-weight:700;flex:none}
+.who b{display:block;font-size:15px}
+.who small{color:var(--muted);font-size:13px}
+@media (max-width:960px){.testi{grid-template-columns:1fr}}
+
+/* FAQ */
+.faq{max-width:900px}
+details{border-bottom:1px solid var(--line);padding:22px 0}
+details:first-child{border-top:1px solid var(--line)}
+summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;font-size:clamp(18px,2vw,24px);font-weight:600;letter-spacing:-.02em}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--orange);font-weight:400;transition:transform .3s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--muted);margin-top:12px;max-width:70ch}
+
+/* CONTACT */
+.cta{padding:clamp(80px,12vw,160px) 0;text-align:left}
+.cta h2{font-size:clamp(48px,10vw,160px);line-height:.88;letter-spacing:-.06em;font-weight:800}
+.cta h2 a{color:var(--orange);transition:color .2s}
+.cta h2 a:hover{color:var(--orange-2)}
+.contacts{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:64px}
+.contacts a{border:1px solid var(--line);border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:8px;transition:border-color .2s,background .2s}
+.contacts a:hover{border-color:var(--orange);background:var(--bg-2)}
+.contacts b{font-size:clamp(17px,1.6vw,21px);font-weight:600;letter-spacing:-.02em;word-break:break-word}
+@media (max-width:860px){.contacts{grid-template-columns:1fr}}
+
+/* FOOTER */
+footer{border-top:1px solid var(--line);padding:56px 0 24px}
+.foot{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
+.foot h6{margin-bottom:16px}
+.foot ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.foot li a{color:#cfcac0;font-size:15px}
+.foot li a:hover{color:var(--orange)}
+.foot address{font-style:normal;color:var(--muted);font-size:15px;margin-top:14px;max-width:32ch}
+.wordmark{font-size:clamp(72px,21vw,320px);font-weight:800;letter-spacing:-.07em;line-height:.8;margin-top:64px;color:var(--bg-3);user-select:none;white-space:nowrap}
+.wordmark span{color:var(--orange)}
+.legal{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:24px;padding-top:20px;border-top:1px solid var(--line)}
+@media (max-width:860px){.foot{grid-template-columns:1fr 1fr}}
+
+/* REVEAL */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="#top" class="brand"><img src="https://www.zobique.com/logo.png" alt="">zobique</a>
+    <div class="links">
+      <a href="#companies">Companies</a>
+      <a href="#platform">Platform</a>
+      <a href="#labs">Labs</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a href="https://labs.zobique.com/" class="btn btn-o" target="_blank" rel="noopener">Book a call <span class="arr">→</span></a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="eyebrow rv">
+      <span class="chip mono"><i class="dot"></i>Live with National Career Service</span>
+      <span class="chip mono">As featured in India Today</span>
+    </div>
+    <h1 class="rv">AI that runs <em>careers</em> and <em>companies.</em></h1>
+    <div class="hero-sub rv">
+      <p>Zobique is two things. A career intelligence platform that turns skills into success for students and early-career professionals. And Zobique Labs, a studio that designs, builds and deploys production AI systems for business.</p>
+      <div class="ctas">
+        <a href="#companies" class="btn btn-o">Explore both <span class="arr">↓</span></a>
+        <a href="#work" class="btn btn-g">See the work</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="marquee" aria-hidden="true">
+  <div class="track" id="track">
+    <span>National Career Service</span><span>Microsoft</span><span>IBM</span><span>Bizowl</span><span>Hobfit</span><span>Clerk</span><span>Appspine</span><span>German Leap</span><span>Agnistoka</span><span>Mera Nivas</span><span>Aipply</span><span>VIIPS</span><span>Ace10x</span><span>SilverButton</span><span>MRIIF</span><span>Techcloud Ltd</span>
+  </div>
+</div>
+
+<!-- TWO COMPANIES -->
+<section class="sec" id="companies">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="mono muted">01 / The family</span>
+      <div>
+        <h2>One team. Two ways to put AI to work.</h2>
+        <p>The same engineers who built a career platform for thousands of students now build custom AI systems for the businesses around them.</p>
+      </div>
+    </div>
+    <div class="split">
+      <a class="card-co a rv" href="https://www.zobique.com/" target="_blank" rel="noopener">
+        <div>
+          <span class="tag mono">Platform · For people</span>
+          <h3>Zobique</h3>
+          <p>India's AI career intelligence platform. Find the right role, beat the ATS and walk into interviews ready.</p>
+          <ul><li>Job Intelligence</li><li>Resume &amp; ATS</li><li>Interview Prep</li><li>Career Studio</li><li>Placement Intelligence</li></ul>
+        </div>
+        <div class="go"><span>Visit zobique.com</span><span class="circ">→</span></div>
+        <div class="big">Z</div>
+      </a>
+      <a class="card-co b rv" href="https://labs.zobique.com/" target="_blank" rel="noopener">
+        <div>
+          <span class="tag mono">Studio · For business</span>
+          <h3>Zobique Labs</h3>
+          <p>We design, build and deploy production AI systems: agents, workflow automation, copilots and private AI.</p>
+          <ul><li>AI Agents</li><li>Copilots</li><li>Workflow Automation</li><li>Private RAG</li><li>Document AI</li></ul>
+        </div>
+        <div class="go"><span>Visit labs.zobique.com</span><span class="circ">→</span></div>
+        <div class="big">L</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section>
+  <div class="wrap" style="padding-top:0;padding-bottom:0">
+    <div class="stats">
+      <div class="stat rv"><b data-count="50">0<sup>+</sup></b><span class="mono">Businesses served</span><small>Labs</small></div>
+      <div class="stat rv"><b data-count="95">0<sup>%</sup></b><span class="mono">Match accuracy</span><small>Platform</small></div>
+      <div class="stat rv"><b>2–16</b><span class="mono">Weeks to production</span><small>Labs</small></div>
+      <div class="stat rv"><b data-count="3">0<sup>x+</sup></b><span class="mono">Faster operations</span><small>Labs</small></div>
+      <div class="stat rv"><b data-count="90">0<sup>%</sup></b><span class="mono">ATS success rate</span><small>Platform</small></div>
+      <div class="stat rv"><b>99.9<sup>%</sup></b><span class="mono">Uptime</span><small>Platform</small></div>
+      <div class="stat rv"><b>24/7</b><span class="mono">Automated operations</span><small>Labs</small></div>
+      <div class="stat rv"><b data-count="100">0<sup>%</sup></b><span class="mono">Custom architecture</span><small>Labs</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- PLATFORM -->
+<section class="sec" id="platform">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="mono o">02 / zobique.com</span>
+      <div>
+        <h2>Turn skills into success with AI career intelligence.</h2>
+        <p>Agentic career management that predicts the roles you fit, optimizes your resume for ATS and manages applications for you, from your first internship to your next role.</p>
+      </div>
+    </div>
+
+    <div class="plat">
+      <div class="tabs rv" id="tabs">
+        <button class="tab on"><div class="row"><h4>Job Intelligence</h4><span class="n mono">01</span></div><p>AI job matching, application tracking, hiring signals and a job-search chatbot that surfaces roles you'd actually get.</p></button>
+        <button class="tab"><div class="row"><h4>Resume &amp; ATS Tools</h4><span class="n mono">02</span></div><p>An AI resume builder that rewrites for every job description and gets you past applicant tracking systems.</p></button>
+        <button class="tab"><div class="row"><h4>Interview Prep</h4><span class="n mono">03</span></div><p>Mock interviews with AI feedback on what you said and how you said it, tuned to the role you're applying for.</p></button>
+        <button class="tab"><div class="row"><h4>Career Studio</h4><span class="n mono">04</span></div><p>Career roadmaps, skill gap analysis and a career readiness score, with certification and course recommendations.</p></button>
+        <button class="tab"><div class="row"><h4>Placement Intelligence</h4><span class="n mono">05</span></div><p>Tools for universities and placement cells: placement analytics, student engagement tracking and campus drives.</p></button>
+      </div>
+
+      <div class="demo rv">
+        <div class="demo-top">
+          <h5>Ready to find your perfect fit?</h5>
+          <span class="scan mono"><i class="dot"></i><span id="scanned">17,847</span> jobs scanned</span>
+        </div>
+        <div id="matches"></div>
+        <a href="https://www.zobique.com/" target="_blank" rel="noopener" class="btn btn-o" style="align-self:flex-start">See my matches <span class="arr">→</span></a>
+        <span class="note mono muted">Sample results from the zobique.com demo</span>
+      </div>
+    </div>
+
+    <div class="tri">
+      <div class="mini rv"><span class="mono o">Predict</span><h6>Predictive career analytics</h6><p>Roadmaps built from live market data, so you learn what hiring managers are about to ask for.</p></div>
+      <div class="mini rv"><span class="mono o">Partner</span><h6>University partnerships</h6><p>Campus placement solutions that give placement cells real visibility into student readiness.</p></div>
+      <div class="mini rv"><span class="mono o">Reach</span><h6>Opportunities from top companies</h6><p>Roles from Google, Microsoft, Amazon, Meta, Apple, Netflix, Spotify, IBM and more, matched to you.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- LABS -->
+<div class="labs-sec" id="labs">
+  <section class="sec" style="border-top:0">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="mono" style="color:#c2410c">03 / labs.zobique.com</span>
+        <div>
+          <h2>Production AI systems for business.</h2>
+          <p class="muted">No templates. Every system is architected around one specific workflow in your business, built on how your operation actually runs.</p>
+        </div>
+      </div>
+
+      <div class="wwd">
+        <div class="rv"><span class="mono" style="color:#c2410c">01</span><h4>AI Application Development</h4><p>From concept to production-ready AI, built around your data and your operating model.</p></div>
+        <div class="rv"><span class="mono" style="color:#c2410c">02</span><h4>AI Agent Development</h4><p>Multi-agent systems with deterministic guardrails, so automation never outruns your control.</p></div>
+        <div class="rv"><span class="mono" style="color:#c2410c">03</span><h4>AI Copilot Development</h4><p>Copilots for sales, support and ops teams that think alongside them in real time.</p></div>
+        <div class="rv"><span class="mono" style="color:#c2410c">04</span><h4>Enterprise AI Solutions</h4><p>Private, secure AI your enterprise can trust, built for strict governance and zero data leakage.</p></div>
+        <div class="rv"><span class="mono" style="color:#c2410c">05</span><h4>AI Workflow Automation</h4><p>Assistants trained on your own knowledge base, built to multiply what your team gets done.</p></div>
+        <div class="rv"><span class="mono" style="color:#c2410c">06</span><h4>AI Strategy &amp; Architecture</h4><p>Senior technical ownership of your AI architecture, roadmap and delivery, via embedded or production engineering.</p></div>
+      </div>
+
+      <div class="solutions">
+        <div class="sol rv">
+          <span class="mono muted" style="color:#9b978f">Customer-facing</span>
+          <h4>Agents that talk to your customers</h4>
+          <div class="pills"><span>AI Sales Agent</span><span>AI Voice Agent</span><span>AI Customer Support</span><span>AI Recruitment Agent</span><span>AI Agent Growth Systems</span></div>
+        </div>
+        <div class="sol alt rv">
+          <span class="mono">Document &amp; enterprise</span>
+          <h4>Systems that run your back office</h4>
+          <div class="pills"><span>Document AI</span><span>Intelligent Document Processing</span><span>Private RAG</span><span>Enterprise AI Automation</span></div>
+        </div>
+      </div>
+
+      <div class="sec-head rv" style="margin-top:96px;margin-bottom:32px">
+        <span class="mono" style="color:#c2410c">How we deliver</span>
+        <div><h2 style="font-size:clamp(30px,4vw,56px)">From business problem to a system that runs.</h2></div>
+      </div>
+      <div class="process">
+        <div class="step rv"><span class="num">01</span><h4>Discover</h4><p>Workflow mapping, ROI modeling and an architecture blueprint.</p></div>
+        <div class="step rv"><span class="num">02</span><h4>Design</h4><p>Agent behavior, tool access, escalation paths and prototypes.</p></div>
+        <div class="step rv"><span class="num">03</span><h4>Build</h4><p>Integrations, custom RAG, private fine-tuning and testing against your real data.</p></div>
+        <div class="step rv"><span class="num">04</span><h4>Launch &amp; Evolve</h4><p>Zero-downtime deployment, telemetry, retraining and A/B testing.</p></div>
+      </div>
+
+      <div class="rv" style="margin-top:56px">
+        <span class="mono muted">Built on the models that matter</span>
+        <div class="models"><span>OpenAI</span><span>Anthropic</span><span>Gemini</span><span>Qwen</span><span>DeepSeek</span></div>
+      </div>
+      <div class="rv" style="margin-top:28px">
+        <span class="mono muted">Industries</span>
+        <div class="models"><span style="background:var(--orange);color:#0a0a0a">Healthcare</span><span style="background:var(--orange);color:#0a0a0a">Finance</span><span style="background:var(--orange);color:#0a0a0a">Recruitment</span><span style="background:var(--orange);color:#0a0a0a">Logistics</span></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- FEATURED WORK -->
+<section class="sec" id="work" style="border-top:0">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="mono muted">04 / Selected work</span>
+      <div>
+        <h2>Shipped, live and in production.</h2>
+        <p>From a government-scale deployment to the startups building on top of us.</p>
+      </div>
+    </div>
+    <div class="feat">
+      <a class="feat-card rv" href="https://ncs.zobique.com/" target="_blank" rel="noopener">
+        <div class="bgimg" style="background-image:url('https://ik.imagekit.io/ons79m2o0/zobique-site/government-doc-bg.jpg')"></div>
+        <span class="mono o">Government · Labs × Platform</span>
+        <h4>A live AI service inside the National Career Service.</h4>
+        <p>A job and skill matching algorithm integrated directly into the Government of India's NCS ecosystem, connecting job seekers with the right opportunities.</p>
+        <span class="lnk">ncs.zobique.com →</span>
+      </a>
+      <div class="feat-card press rv">
+        <span class="q">“</span>
+        <span class="mono">Press</span>
+        <h4>Featured in India Today</h4>
+        <p>The story of how a founder's career insight became an AI platform used by thousands of students.</p>
+        <a class="lnk" href="https://labs.zobique.com/" target="_blank" rel="noopener">Read on Labs →</a>
+      </div>
+    </div>
+
+    <div class="sec-head rv" style="margin:96px 0 32px">
+      <span class="mono muted">Portfolio</span>
+      <div><h2 style="font-size:clamp(30px,4vw,56px)">We've built with founders, institutions and enterprises.</h2></div>
+    </div>
+    <div class="grid-co" id="grid"></div>
+
+    <div class="stack rv" aria-label="Tech stack">
+      <span>Next.js</span><span>TypeScript</span><span>React</span><span>Tailwind CSS</span><span>Node.js</span><span>Express</span><span>Prisma</span><span>Python</span><span>PostgreSQL</span><span>MongoDB</span><span>Redis</span><span>Firebase</span><span>Supabase</span><span>AWS</span><span>Docker</span><span>Vercel</span><span>Nginx</span><span>Linux</span>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="mono muted">05 / Kind words</span>
+      <div><h2>From the teams and students we build for.</h2></div>
+    </div>
+    <div class="testi">
+      <figure class="t rv">
+        <blockquote>Integrating a job and skill matching algorithm into an existing government ecosystem comes with its own layers of complexity. The team navigated all of it with professionalism and technical depth.</blockquote>
+        <figcaption class="who"><span class="av">NCS</span><div><b>National Career Service</b><small>Ministry of Labour and Employment, Govt. of India</small></div></figcaption>
+      </figure>
+      <figure class="t rv">
+        <blockquote>Building a marketplace and community platform together is no small task. It genuinely feels like working with a team that's invested in Bizowl's success, not just delivering a project.</blockquote>
+        <figcaption class="who"><span class="av">PS</span><div><b>Prashant Shirohi</b><small>Founder, Bizowl</small></div></figcaption>
+      </figure>
+      <figure class="t rv">
+        <blockquote>Zobique helped me build an ATS-friendly resume and figure out exactly which cloud certifications to go after next.</blockquote>
+        <figcaption class="who"><span class="av">SC</span><div><b>Sachin Chaubey</b><small>3rd-year student, Cloud Computing enthusiast</small></div></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="mono muted">06 / FAQ</span>
+      <div><h2>Questions, answered.</h2></div>
+    </div>
+    <div class="faq rv">
+      <details><summary>What's the difference between Zobique and Zobique Labs?</summary><p>Zobique is a career intelligence platform for students, graduates and universities. Zobique Labs is our engineering studio, building custom AI agents, copilots and automation for businesses.</p></details>
+      <details><summary>What makes the Zobique platform different from other job sites?</summary><p>It doesn't just list jobs. It predicts the roles you fit, optimizes your resume for each application, prepares you for interviews and tracks everything in one place.</p></details>
+      <details><summary>How fast can Labs get an AI system into production?</summary><p>Typically between 2 and 16 weeks, depending on scope, through a Discover, Design, Build and Launch process.</p></details>
+      <details><summary>Is my company's data safe with Labs?</summary><p>Systems are built with strict data privacy, SOC2 compliance standards and role-based access controls, including private deployments with zero data leakage.</p></details>
+      <details><summary>Does the platform cover careers outside computer science?</summary><p>Yes. Career guidance, certifications and course recommendations extend beyond CS, and job suggestions take your location into account.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="cta" id="contact">
+  <div class="wrap">
+    <span class="mono muted rv">07 / Let's talk</span>
+    <h2 class="rv" style="margin-top:24px">Tell us the workflow<br>costing you time.<br><a href="https://labs.zobique.com/" target="_blank" rel="noopener">Book a call →</a></h2>
+    <div class="contacts">
+      <a href="mailto:contact@zobique.com" class="rv"><span class="mono muted">New projects · Labs</span><b>contact@zobique.com</b></a>
+      <a href="mailto:support@zobique.com" class="rv"><span class="mono muted">Platform support</span><b>support@zobique.com</b></a>
+      <a href="https://wa.me/918130243850" target="_blank" rel="noopener" class="rv"><span class="mono muted">Call or WhatsApp</span><b>+91 81302 43850</b></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a href="#top" class="brand"><img src="https://www.zobique.com/logo.png" alt="">zobique</a>
+        <address>Manav Rachna Campus Rd, Sector 43, Faridabad, Haryana, India</address>
+      </div>
+      <div>
+        <h6 class="mono muted">Platform</h6>
+        <ul>
+          <li><a href="https://www.zobique.com/" target="_blank" rel="noopener">zobique.com</a></li>
+          <li><a href="https://www.zobique.com/sign-up" target="_blank" rel="noopener">Get started free</a></li>
+          <li><a href="https://blog.zobique.com/" target="_blank" rel="noopener">Blog</a></li>
+        </ul>
+      </div>
+      <div>
+        <h6 class="mono muted">Labs</h6>
+        <ul>
+          <li><a href="https://labs.zobique.com/" target="_blank" rel="noopener">labs.zobique.com</a></li>
+          <li><a href="https://ncs.zobique.com/" target="_blank" rel="noopener">NCS deployment</a></li>
+          <li><a href="mailto:contact@zobique.com">Start a project</a></li>
+        </ul>
+      </div>
+      <div>
+        <h6 class="mono muted">Social</h6>
+        <ul>
+          <li><a href="https://x.com/zobiqueai" target="_blank" rel="noopener">X / Twitter</a></li>
+          <li><a href="https://www.linkedin.com/company/zobique" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://www.instagram.com/zobiqueai" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.youtube.com/@zobique" target="_blank" rel="noopener">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wordmark" aria-hidden="true">zobique<span>.</span></div>
+    <div class="legal mono muted">
+      <span>© 2026 Zobique. All rights reserved.</span>
+      <span><a href="https://www.zobique.com/privacy-policy" target="_blank" rel="noopener">Privacy</a> · <a href="https://www.zobique.com/terms-and-conditions" target="_blank" rel="noopener">Terms</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Duplicate marquee for seamless loop
+const track=document.getElementById('track');track.innerHTML+=track.innerHTML;
+
+// Portfolio grid
+const C='https://res.cloudinary.com/dufaxdxsj/image/upload/';
+const companies=[
+  ['National Career Service','Govt. of India job-skill matching',C+'v1777100591/ncs-small-logo_ucxlog.png',['Labs','Platform','Government']],
+  ['Bizowl','Marketplace & community platform',null,['Labs','Build']],
+  ['Hobfit','Health & fitness',C+'v1776186102/hobfit_ypukos.png',['Labs','Platform']],
+  ['Clerk','Patent drafting automation',C+'v1777102661/clerk_bzvmrq.png',['Labs','Automation']],
+  ['Appspine','Product engineering',C+'v1774548949/appspine_xvlp6a.png',['Labs','Platform']],
+  ['German Leap','Study & careers abroad',C+'v1775897286/germanLeap_virujq.png',['Labs','Platform']],
+  ['Agnistoka','Partner brand',C+'v1775897075/agnistoka_rikzrv.png',['Labs','Platform']],
+  ['Mera Nivas','Real estate & housing',C+'v1775898712/meranivas_k05kpt.png',['Labs','Platform']],
+  ['Aipply','AI job applications',C+'v1776186160/aipply_a4fidw.png',['Labs','Platform']],
+  ['Techcloud Ltd','Cloud services',C+'v1777101358/tech_cloud_ltd_logo_zqkyzq.jpg',['Platform']],
+  ['VIIPS','Founder-led venture',null,['Labs']],
+  ['Ace10x','Growth systems',null,['Labs']],
+  ['SilverButton','Client build',null,['Labs']],
+  ['MRIIF','Innovation & incubation',null,['Labs','Build']],
+  ['Microsoft','Trusted by',null,['Platform']],
+  ['IBM','Trusted by',null,['Platform']],
+];
+const esc=s=>s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+document.getElementById('grid').innerHTML=companies.map(([n,d,img,tags])=>`
+  <div class="co rv">
+    <div class="logo">${img?`<img src="${img}" alt="${esc(n)} logo" loading="lazy" onerror="this.outerHTML='<span class=txt>${esc(n)}</span>'">`:`<span class="txt">${esc(n)}</span>`}</div>
+    <div><h5>${esc(n)}</h5><div class="desc">${esc(d)}</div></div>
+    <div class="tags">${tags.map(t=>`<span class="${t==='Platform'?'p':t==='Labs'?'l':''}">${t}</span>`).join('')}</div>
+  </div>`).join('');
+
+// Demo matches
+const matches=[['Software Engineer','Google',98],['Frontend Dev','Microsoft',95],['Product Designer','Meta',92],['Data Scientist','Amazon',87],['DevOps Engineer','Netflix',78]];
+document.getElementById('matches').innerHTML=matches.map(([r,c,p])=>`
+  <div class="match" style="margin-bottom:10px"><span class="r">${r}</span><span class="pct" style="color:${p>=90?'var(--green)':p>=85?'var(--orange-2)':'var(--muted)'}">${p}%</span><span class="c">${c}</span><span class="bar"><i data-w="${p}"></i></span></div>`).join('');
+
+// Tabs
+document.querySelectorAll('#tabs .tab').forEach(t=>t.addEventListener('click',()=>{
+  document.querySelectorAll('#tabs .tab').forEach(x=>x.classList.remove('on'));t.classList.add('on');
+}));
+
+// Reveal + counters + bars
+const io=new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting)return;
+  const el=e.target;el.classList.add('in');
+  el.querySelectorAll('[data-count]').forEach(countUp);
+  if(el.classList.contains('demo'))el.querySelectorAll('.bar i').forEach(i=>i.style.width=i.dataset.w+'%');
+  io.unobserve(el);
+}),{threshold:.15});
+function countUp(b){
+  const to=+b.dataset.count,sup=b.querySelector('sup')?.outerHTML||'',t0=performance.now(),d=1400;
+  (function f(t){const k=Math.min(1,(t-t0)/d),v=Math.round(to*(1-Math.pow(1-k,3)));b.innerHTML=v+sup;if(k<1)requestAnimationFrame(f)})(t0);
+}
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+
+// Ticking job counter
+let n=17847;const sc=document.getElementById('scanned');
+setInterval(()=>{n+=Math.floor(Math.random()*4)+1;sc.textContent=n.toLocaleString('en-IN')},1800);
+</script>
+</body>
+</html>
