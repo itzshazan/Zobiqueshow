@@ -1,12 +1,24 @@
 // All copy and data pulled from zobique.com and labs.zobique.com
 
+export interface Logo { name: string; src: string; h?: number }
+export interface Stat { label: string; count?: number; text?: string; suffix?: string }
+export interface TitledText { title: string; body: string }
+export type Match = readonly [role: string, company: string, pct: number]
+export interface Solution { name: string; group: string }
+export interface Phase { title: string; items: string[] }
+export type Spec = readonly [label: string, values: string[]]
+export interface Company { name: string; desc: string; img?: string; tags: string[] }
+export interface Testimonial { quote: string; initials: string; name: string; role: string }
+export type Pair = readonly [string, string]
+export interface ContactLink { label: string; value: string; href: string }
+
 export const LOGO = '/zobique-mark.png'
 export const LABS_URL = 'https://labs.zobique.com/'
 export const PLATFORM_URL = 'https://www.zobique.com/'
 
 // Client logos for the scrolling strip under the hero
 const CL = 'https://res.cloudinary.com/dufaxdxsj/image/upload/'
-export const marquee = [
+export const marquee: Logo[] = [
   { name: 'National Career Service', src: CL + 'v1777100591/ncs-small-logo_ucxlog.png', h: 58 },
   { name: 'Microsoft', src: '/logos/microsoft.svg' },
   { name: 'IBM', src: '/logos/ibm.svg' },
@@ -20,14 +32,14 @@ export const marquee = [
   { name: 'Techcloud Ltd', src: CL + 'v1777101358/tech_cloud_ltd_logo_zqkyzq.jpg' },
 ]
 
-export const stats = [
+export const stats: Stat[] = [
   { count: 50, suffix: '+', label: 'businesses served by Zobique Labs' },
   { count: 95, suffix: '%', label: 'match accuracy on the career platform' },
   { text: '2–16', label: 'weeks from first call to production' },
   { text: '99.9', suffix: '%', label: 'uptime across the platform' },
 ]
 
-export const platformServices = [
+export const platformServices: TitledText[] = [
   { title: 'Job Intelligence', body: "AI job matching, application tracking, hiring signals and a job-search chatbot that surfaces roles you'd actually get." },
   { title: 'Resume & ATS Tools', body: 'An AI resume builder that rewrites for every job description and gets you past applicant tracking systems.' },
   { title: 'Interview Prep', body: "Mock interviews with AI feedback on what you said and how you said it, tuned to the role you're applying for." },
@@ -35,7 +47,7 @@ export const platformServices = [
   { title: 'Placement Intelligence', body: 'Tools for universities and placement cells: placement analytics, student engagement tracking and campus drives.' },
 ]
 
-export const matches = [
+export const matches: Match[] = [
   ['Software Engineer', 'Google', 98],
   ['Frontend Dev', 'Microsoft', 95],
   ['Product Designer', 'Meta', 92],
@@ -44,7 +56,7 @@ export const matches = [
 ]
 
 // Downloaded from Wikimedia Commons into public/logos
-export const topCompanies = [
+export const topCompanies: Logo[] = [
   { name: 'Google', src: '/logos/google.svg' },
   { name: 'Microsoft', src: '/logos/microsoft.svg' },
   { name: 'Amazon', src: '/logos/amazon.svg' },
@@ -55,7 +67,7 @@ export const topCompanies = [
   { name: 'IBM', src: '/logos/ibm.svg' },
 ]
 
-export const labsServices = [
+export const labsServices: TitledText[] = [
   { title: 'AI Application Development', body: 'From concept to production-ready AI, built around your data and your operating model.' },
   { title: 'AI Agent Development', body: 'Multi-agent systems with deterministic guardrails, so automation never outruns your control.' },
   { title: 'AI Copilot Development', body: 'Copilots for sales, support and ops teams that think alongside them in real time.' },
@@ -64,7 +76,7 @@ export const labsServices = [
   { title: 'AI Strategy & Architecture', body: 'Senior technical ownership of your AI architecture, roadmap and delivery, via embedded or production engineering.' },
 ]
 
-export const solutions = [
+export const solutions: Solution[] = [
   { name: 'AI Sales Agent', group: 'Customer-facing' },
   { name: 'AI Voice Agent', group: 'Customer-facing' },
   { name: 'AI Customer Support', group: 'Customer-facing' },
@@ -76,14 +88,14 @@ export const solutions = [
   { name: 'Enterprise AI Automation', group: 'Document & enterprise' },
 ]
 
-export const process = [
+export const deliveryPhases: Phase[] = [
   { title: 'Discover', items: ['Workflow mapping', 'ROI modeling', 'Architecture blueprint'] },
   { title: 'Design', items: ['Agent behavior', 'Tool access', 'Escalation paths', 'Prototypes'] },
   { title: 'Build', items: ['Integrations', 'Custom RAG', 'Private fine-tuning', 'Testing on real data'] },
   { title: 'Launch & Evolve', items: ['Zero-downtime deployment', 'Telemetry', 'Retraining', 'A/B testing'] },
 ]
 
-export const specs = [
+export const specs: Spec[] = [
   ['Models', ['OpenAI', 'Anthropic', 'Gemini', 'Qwen', 'DeepSeek']],
   ['Industries', ['Healthcare', 'Finance', 'Recruitment', 'Logistics']],
   ['Engagement', ['Embedded AI Engineering', 'Production AI Engineering']],
@@ -91,7 +103,7 @@ export const specs = [
 ]
 
 const C = 'https://res.cloudinary.com/dufaxdxsj/image/upload/'
-export const companies = [
+export const companies: Company[] = [
   { name: 'National Career Service', desc: 'Govt. of India job-skill matching', img: C + 'v1777100591/ncs-small-logo_ucxlog.png', tags: ['Labs', 'Platform', 'Government'] },
   { name: 'Bizowl', desc: 'Marketplace & community platform', tags: ['Labs', 'Build'] },
   { name: 'Hobfit', desc: 'Health & fitness', img: C + 'v1776186102/hobfit_ypukos.png', tags: ['Labs', 'Platform'] },
@@ -110,7 +122,7 @@ export const companies = [
   { name: 'IBM', desc: 'Trusted by', tags: ['Platform'] },
 ]
 
-export const testimonials = [
+export const testimonials: Testimonial[] = [
   {
     quote: 'Integrating a job and skill matching algorithm into an existing government ecosystem comes with its own layers of complexity. The team navigated all of it with professionalism and technical depth.',
     initials: 'NCS', name: 'National Career Service', role: 'Ministry of Labour and Employment, Govt. of India',
@@ -126,7 +138,7 @@ export const testimonials = [
   },
 ]
 
-export const faqs = [
+export const faqs: Pair[] = [
   ["What's the difference between Zobique and Zobique Labs?", 'Zobique is a career intelligence platform for students, graduates and universities. Zobique Labs is our engineering studio, building custom AI agents, copilots and automation for businesses.'],
   ['What makes the Zobique platform different from other job sites?', "It doesn't just list jobs. It predicts the roles you fit, optimizes your resume for each application, prepares you for interviews and tracks everything in one place."],
   ['How fast can Labs get an AI system into production?', 'Typically between 2 and 16 weeks, depending on scope, through a Discover, Design, Build and Launch process.'],
@@ -134,13 +146,13 @@ export const faqs = [
   ['Does the platform cover careers outside computer science?', 'Yes. Career guidance, certifications and course recommendations extend beyond CS, and job suggestions take your location into account.'],
 ]
 
-export const contacts = [
+export const contacts: ContactLink[] = [
   { label: 'New projects', value: 'contact@zobique.com', href: 'mailto:contact@zobique.com' },
   { label: 'Platform support', value: 'support@zobique.com', href: 'mailto:support@zobique.com' },
   { label: 'Call or WhatsApp', value: '+91 81302 43850', href: 'https://wa.me/918130243850' },
 ]
 
-export const socials = [
+export const socials: Pair[] = [
   ['X / Twitter', 'https://x.com/zobiqueai'],
   ['LinkedIn', 'https://www.linkedin.com/company/zobique'],
   ['Instagram', 'https://www.instagram.com/zobiqueai'],

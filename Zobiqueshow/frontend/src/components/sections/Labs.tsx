@@ -1,12 +1,14 @@
+'use client'
+
 import { useRef } from 'react'
-import { Reveal } from '../../hooks'
-import { gsap, useGSAP, reducedMotion } from '../../lib/gsap'
-import { LABS_URL, labsServices, solutions, process, specs } from '../../data/content'
-import SectionHead from '../ui/SectionHead'
+import { Reveal } from '@/hooks'
+import { gsap, useGSAP, reducedMotion } from '@/lib/gsap'
+import { LABS_URL, labsServices, solutions, deliveryPhases, specs } from '@/data/content'
+import SectionHead from '@/components/ui/SectionHead'
 
 // Four phases on one track; the line fills as you scroll through it
 function Timeline() {
-  const scope = useRef(null)
+  const scope = useRef<HTMLDivElement>(null)
 
   useGSAP(() => {
     if (reducedMotion()) {
@@ -44,7 +46,7 @@ function Timeline() {
       </div>
       <div className="tl-track"><i /></div>
       <ol className="tl-phases">
-        {process.map((p) => (
+        {deliveryPhases.map((p) => (
           <li key={p.title}>
             <span className="tl-node" />
             <h4>{p.title}</h4>

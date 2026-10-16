@@ -1,7 +1,10 @@
-import { useInView, useCountUp } from '../../hooks'
-import { stats } from '../../data/content'
+'use client'
 
-function Stat({ count, text, suffix, label }) {
+import { useInView, useCountUp } from '@/hooks'
+import { stats } from '@/data/content'
+import type { Stat as StatData } from '@/data/content'
+
+function Stat({ count, text, suffix, label }: StatData) {
   const [ref, inView] = useInView()
   const value = useCountUp(count ?? 0, inView && count != null)
   return (

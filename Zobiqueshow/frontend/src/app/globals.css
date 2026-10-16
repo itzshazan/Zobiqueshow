@@ -8,7 +8,7 @@
   --green:#2e7d32;
   --ink:#0f1117; --ink-2:#1a1c27; --footer:#111827;
   --shadow:0 1px 2px rgba(16,24,40,.04),0 8px 24px rgba(16,24,40,.06);
-  --sans:Geist,-apple-system,system-ui,sans-serif; --mono:"Geist Mono",ui-monospace,monospace;
+  --sans:var(--font-geist),-apple-system,system-ui,sans-serif; --mono:var(--font-geist-mono),ui-monospace,monospace;
   --gutter:clamp(16px,4vw,48px); --max:1360px;
 }
 *{box-sizing:border-box;margin:0;padding:0}

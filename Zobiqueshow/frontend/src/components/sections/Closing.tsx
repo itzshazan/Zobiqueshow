@@ -1,9 +1,11 @@
+'use client'
+
 import { useRef, useState } from 'react'
-import { gsap, useGSAP } from '../../lib/gsap'
-import { Reveal } from '../../hooks'
-import { LABS_URL, PLATFORM_URL, testimonials, faqs, contacts, socials } from '../../data/content'
-import SectionHead from '../ui/SectionHead'
-import { Brand } from '../ui/Nav'
+import { gsap, useGSAP } from '@/lib/gsap'
+import { Reveal } from '@/hooks'
+import { LABS_URL, PLATFORM_URL, testimonials, faqs, contacts, socials } from '@/data/content'
+import SectionHead from '@/components/ui/SectionHead'
+import { Brand } from '@/components/ui/Nav'
 
 export function Testimonials() {
   const [active, setActive] = useState(0)
@@ -57,7 +59,7 @@ export function Faq() {
 }
 
 export function Contact() {
-  const scope = useRef(null)
+  const scope = useRef<HTMLElement>(null)
 
   useGSAP(() => {
     gsap.from('.cta h2 .line-in', {
@@ -95,10 +97,10 @@ export function Contact() {
   )
 }
 
-const ext = { target: '_blank', rel: 'noopener' }
+const ext = { target: '_blank', rel: 'noopener' } as const
 
 export function Footer() {
-  const scope = useRef(null)
+  const scope = useRef<HTMLElement>(null)
 
   useGSAP(() => {
     gsap.from('.wordmark span', {

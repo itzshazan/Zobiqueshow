@@ -1,12 +1,15 @@
+'use client'
+
 import { useRef, useState } from 'react'
-import { gsap, useGSAP, reducedMotion } from '../../lib/gsap'
-import { Reveal } from '../../hooks'
-import { LABS_URL, companies } from '../../data/content'
-import SectionHead from '../ui/SectionHead'
+import { gsap, useGSAP, reducedMotion } from '@/lib/gsap'
+import { Reveal } from '@/hooks'
+import { LABS_URL, companies } from '@/data/content'
+import type { Company } from '@/data/content'
+import SectionHead from '@/components/ui/SectionHead'
 
-const tagClass = (t) => (t === 'Platform' ? 'p' : t === 'Labs' ? 'l' : '')
+const tagClass = (t: string) => (t === 'Platform' ? 'p' : t === 'Labs' ? 'l' : '')
 
-function CompanyCard({ name, desc, img, tags }) {
+function CompanyCard({ name, desc, img, tags }: Company) {
   const [broken, setBroken] = useState(false)
   return (
     <Reveal className="co">
@@ -23,7 +26,7 @@ function CompanyCard({ name, desc, img, tags }) {
 }
 
 export default function Work() {
-  const scope = useRef(null)
+  const scope = useRef<HTMLElement>(null)
 
   useGSAP(() => {
     if (reducedMotion()) return

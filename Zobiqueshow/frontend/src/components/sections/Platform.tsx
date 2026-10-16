@@ -1,8 +1,10 @@
+'use client'
+
 import { useEffect, useState } from 'react'
-import { Reveal, useInView } from '../../hooks'
-import { PLATFORM_URL, platformServices, matches, topCompanies } from '../../data/content'
-import SectionHead from '../ui/SectionHead'
-import LogoLoop from '../ui/LogoLoop'
+import { Reveal, useInView } from '@/hooks'
+import { PLATFORM_URL, platformServices, matches, topCompanies } from '@/data/content'
+import SectionHead from '@/components/ui/SectionHead'
+import LogoLoop from '@/components/ui/LogoLoop'
 
 function Demo() {
   const [ref, inView] = useInView()

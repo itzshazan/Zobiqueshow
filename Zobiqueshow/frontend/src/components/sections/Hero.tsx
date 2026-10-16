@@ -1,7 +1,10 @@
+'use client'
+
 import { useRef } from 'react'
-import { gsap, useGSAP, reducedMotion } from '../../lib/gsap'
-import { marquee, PLATFORM_URL, LABS_URL } from '../../data/content'
-import LogoLoop from '../ui/LogoLoop'
+import type { ComponentType } from 'react'
+import { gsap, useGSAP, reducedMotion } from '@/lib/gsap'
+import { marquee, PLATFORM_URL, LABS_URL } from '@/data/content'
+import LogoLoop from '@/components/ui/LogoLoop'
 
 // Line-art illustrations in the style of High Alpha's hero cards
 function StepsArt() {
@@ -28,7 +31,7 @@ function StepsArt() {
 
 function CubesArt() {
   // Interlocking cubes: connected systems
-  const cube = (x, y, s = 26) => (
+  const cube = (x: number, y: number, s = 26) => (
     <g key={`${x}-${y}`}>
       <path d={`M${x} ${y} L${x + s} ${y - s / 2} L${x + 2 * s} ${y} L${x + s} ${y + s / 2} Z`} />
       <path d={`M${x} ${y} V${y + s} L${x + s} ${y + 1.5 * s} V${y + s / 2}`} />
@@ -47,7 +50,15 @@ function CubesArt() {
   )
 }
 
-const cards = [
+interface HeroCard {
+  name: string
+  body: string
+  href: string
+  Art: ComponentType
+  variant: 'platform' | 'labs'
+}
+
+const cards: HeroCard[] = [
   {
     name: 'Zobique',
     body: 'AI career intelligence for students, graduates and universities.',
@@ -65,7 +76,7 @@ const cards = [
 ]
 
 export default function Hero() {
-  const scope = useRef(null)
+  const scope = useRef<HTMLDivElement>(null)
 
   useGSAP(() => {
     const quick = reducedMotion()
@@ -77,7 +88,7 @@ export default function Hero() {
       .from('.hero-card', { y: 60, opacity: 0, stagger: 0.12, duration: 1 }, '-=0.6')
 
     // The line drawings sketch themselves in once the cards have landed
-    const paths = gsap.utils.toArray('.hero-art path')
+    const paths = gsap.utils.toArray<SVGPathElement>('.hero-art path')
     paths.forEach((p) => {
       const len = p.getTotalLength()
       gsap.set(p, { strokeDasharray: len, strokeDashoffset: len })

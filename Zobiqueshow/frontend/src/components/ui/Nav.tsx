@@ -1,7 +1,9 @@
-import { useEffect, useState } from 'react'
-import { LOGO, LABS_URL } from '../../data/content'
+'use client'
 
-const links = [
+import { useEffect, useState } from 'react'
+import { LOGO, LABS_URL } from '@/data/content'
+
+const links: [label: string, href: string][] = [
   ['Platform', '#platform'],
   ['Labs', '#labs'],
   ['Work', '#work'],
@@ -20,7 +22,7 @@ export default function Nav() {
   // Close the phone menu on Escape or when the screen grows past the breakpoint
   useEffect(() => {
     if (!open) return
-    const onKey = (e) => e.key === 'Escape' && setOpen(false)
+    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && setOpen(false)
     const mq = window.matchMedia('(min-width: 861px)')
     const onResize = () => mq.matches && setOpen(false)
     window.addEventListener('keydown', onKey)
