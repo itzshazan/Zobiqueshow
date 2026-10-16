@@ -1,35 +1,21 @@
 // All copy and data pulled from zobique.com and labs.zobique.com
 
-export interface Logo { name: string; src: string; h?: number }
-export interface Stat { label: string; count?: number; text?: string; suffix?: string }
-export interface TitledText { title: string; body: string }
-export type Match = readonly [role: string, company: string, pct: number]
-export interface Solution { name: string; group: string }
-export interface Phase { title: string; items: string[] }
-export type Spec = readonly [label: string, values: string[]]
-export interface Company { name: string; desc: string; img?: string; tags: string[] }
-export interface Testimonial { quote: string; initials: string; name: string; role: string }
-export type Pair = readonly [string, string]
-export interface ContactLink { label: string; value: string; href: string }
-
-export const LOGO = '/zobique-mark.png'
-export const LABS_URL = 'https://labs.zobique.com/'
-export const PLATFORM_URL = 'https://www.zobique.com/'
+import { CDN_URL } from '@/lib/constants'
+import type { Logo, Stat, TitledText, Match, Solution, Phase, Company, Spec, Testimonial, Pair, ContactLink } from '@/types'
 
 // Client logos for the scrolling strip under the hero
-const CL = 'https://res.cloudinary.com/dufaxdxsj/image/upload/'
 export const marquee: Logo[] = [
-  { name: 'National Career Service', src: CL + 'v1777100591/ncs-small-logo_ucxlog.png', h: 58 },
+  { name: 'National Career Service', src: CDN_URL + 'v1777100591/ncs-small-logo_ucxlog.png', h: 58 },
   { name: 'Microsoft', src: '/logos/microsoft.svg' },
   { name: 'IBM', src: '/logos/ibm.svg' },
-  { name: 'Hobfit', src: CL + 'v1776186102/hobfit_ypukos.png' },
-  { name: 'Clerk', src: CL + 'v1777102661/clerk_bzvmrq.png' },
-  { name: 'Appspine', src: CL + 'v1774548949/appspine_xvlp6a.png' },
-  { name: 'German Leap', src: CL + 'v1775897286/germanLeap_virujq.png' },
-  { name: 'Agnistoka', src: CL + 'v1775897075/agnistoka_rikzrv.png' },
-  { name: 'Mera Nivas', src: CL + 'v1775898712/meranivas_k05kpt.png' },
-  { name: 'Aipply', src: CL + 'v1776186160/aipply_a4fidw.png' },
-  { name: 'Techcloud Ltd', src: CL + 'v1777101358/tech_cloud_ltd_logo_zqkyzq.jpg' },
+  { name: 'Hobfit', src: CDN_URL + 'v1776186102/hobfit_ypukos.png' },
+  { name: 'Clerk', src: CDN_URL + 'v1777102661/clerk_bzvmrq.png' },
+  { name: 'Appspine', src: CDN_URL + 'v1774548949/appspine_xvlp6a.png' },
+  { name: 'German Leap', src: CDN_URL + 'v1775897286/germanLeap_virujq.png' },
+  { name: 'Agnistoka', src: CDN_URL + 'v1775897075/agnistoka_rikzrv.png' },
+  { name: 'Mera Nivas', src: CDN_URL + 'v1775898712/meranivas_k05kpt.png' },
+  { name: 'Aipply', src: CDN_URL + 'v1776186160/aipply_a4fidw.png' },
+  { name: 'Techcloud Ltd', src: CDN_URL + 'v1777101358/tech_cloud_ltd_logo_zqkyzq.jpg' },
 ]
 
 export const stats: Stat[] = [
@@ -102,18 +88,17 @@ export const specs: Spec[] = [
   ['Security', ['SOC2 standards', 'Role-based access', 'Private deployments']],
 ]
 
-const C = 'https://res.cloudinary.com/dufaxdxsj/image/upload/'
 export const companies: Company[] = [
-  { name: 'National Career Service', desc: 'Govt. of India job-skill matching', img: C + 'v1777100591/ncs-small-logo_ucxlog.png', tags: ['Labs', 'Platform', 'Government'] },
+  { name: 'National Career Service', desc: 'Govt. of India job-skill matching', img: CDN_URL + 'v1777100591/ncs-small-logo_ucxlog.png', tags: ['Labs', 'Platform', 'Government'] },
   { name: 'Bizowl', desc: 'Marketplace & community platform', tags: ['Labs', 'Build'] },
-  { name: 'Hobfit', desc: 'Health & fitness', img: C + 'v1776186102/hobfit_ypukos.png', tags: ['Labs', 'Platform'] },
-  { name: 'Clerk', desc: 'Patent drafting automation', img: C + 'v1777102661/clerk_bzvmrq.png', tags: ['Labs', 'Automation'] },
-  { name: 'Appspine', desc: 'Product engineering', img: C + 'v1774548949/appspine_xvlp6a.png', tags: ['Labs', 'Platform'] },
-  { name: 'German Leap', desc: 'Study & careers abroad', img: C + 'v1775897286/germanLeap_virujq.png', tags: ['Labs', 'Platform'] },
-  { name: 'Agnistoka', desc: 'Partner brand', img: C + 'v1775897075/agnistoka_rikzrv.png', tags: ['Labs', 'Platform'] },
-  { name: 'Mera Nivas', desc: 'Real estate & housing', img: C + 'v1775898712/meranivas_k05kpt.png', tags: ['Labs', 'Platform'] },
-  { name: 'Aipply', desc: 'AI job applications', img: C + 'v1776186160/aipply_a4fidw.png', tags: ['Labs', 'Platform'] },
-  { name: 'Techcloud Ltd', desc: 'Cloud services', img: C + 'v1777101358/tech_cloud_ltd_logo_zqkyzq.jpg', tags: ['Platform'] },
+  { name: 'Hobfit', desc: 'Health & fitness', img: CDN_URL + 'v1776186102/hobfit_ypukos.png', tags: ['Labs', 'Platform'] },
+  { name: 'Clerk', desc: 'Patent drafting automation', img: CDN_URL + 'v1777102661/clerk_bzvmrq.png', tags: ['Labs', 'Automation'] },
+  { name: 'Appspine', desc: 'Product engineering', img: CDN_URL + 'v1774548949/appspine_xvlp6a.png', tags: ['Labs', 'Platform'] },
+  { name: 'German Leap', desc: 'Study & careers abroad', img: CDN_URL + 'v1775897286/germanLeap_virujq.png', tags: ['Labs', 'Platform'] },
+  { name: 'Agnistoka', desc: 'Partner brand', img: CDN_URL + 'v1775897075/agnistoka_rikzrv.png', tags: ['Labs', 'Platform'] },
+  { name: 'Mera Nivas', desc: 'Real estate & housing', img: CDN_URL + 'v1775898712/meranivas_k05kpt.png', tags: ['Labs', 'Platform'] },
+  { name: 'Aipply', desc: 'AI job applications', img: CDN_URL + 'v1776186160/aipply_a4fidw.png', tags: ['Labs', 'Platform'] },
+  { name: 'Techcloud Ltd', desc: 'Cloud services', img: CDN_URL + 'v1777101358/tech_cloud_ltd_logo_zqkyzq.jpg', tags: ['Platform'] },
   { name: 'VIIPS', desc: 'Founder-led venture', tags: ['Labs'] },
   { name: 'Ace10x', desc: 'Growth systems', tags: ['Labs'] },
   { name: 'SilverButton', desc: 'Client build', tags: ['Labs'] },

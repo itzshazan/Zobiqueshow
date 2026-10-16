@@ -1,9 +1,11 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { Reveal, useInView } from '@/hooks'
-import { PLATFORM_URL, platformServices, matches, topCompanies } from '@/data/content'
-import SectionHead from '@/components/ui/SectionHead'
+import { useInView } from '@/hooks/useInView'
+import Reveal from '@/components/shared/Reveal'
+import { PLATFORM_URL } from '@/lib/constants'
+import { platformServices, matches, topCompanies } from '@/data/content'
+import SectionHead from '@/components/shared/SectionHead'
 import LogoLoop from '@/components/ui/LogoLoop'
 
 function Demo() {

@@ -1,5 +1,5 @@
 import type { CSSProperties, ReactNode } from 'react'
-import { Reveal } from '@/hooks'
+import Reveal from './Reveal'
 
 interface SectionHeadProps {
   title: ReactNode

@@ -2,10 +2,11 @@
 
 import { useRef, useState } from 'react'
 import { gsap, useGSAP, reducedMotion } from '@/lib/gsap'
-import { Reveal } from '@/hooks'
-import { LABS_URL, companies } from '@/data/content'
-import type { Company } from '@/data/content'
-import SectionHead from '@/components/ui/SectionHead'
+import Reveal from '@/components/shared/Reveal'
+import { LABS_URL } from '@/lib/constants'
+import { companies } from '@/data/content'
+import type { Company } from '@/types'
+import SectionHead from '@/components/shared/SectionHead'
 
 const tagClass = (t: string) => (t === 'Platform' ? 'p' : t === 'Labs' ? 'l' : '')
 

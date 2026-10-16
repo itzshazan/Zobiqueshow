@@ -1,5 +1,5 @@
 import type { CSSProperties } from 'react'
-import type { Logo } from '@/data/content'
+import type { Logo } from '@/types'
 
 interface LogoLoopProps {
   label?: string

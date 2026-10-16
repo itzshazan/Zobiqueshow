@@ -1,15 +1,18 @@
-import Nav from '@/components/ui/Nav'
-import Hero from '@/components/sections/Hero'
-import Stats from '@/components/sections/Stats'
-import Platform from '@/components/sections/Platform'
-import Labs from '@/components/sections/Labs'
-import Work from '@/components/sections/Work'
-import { Testimonials, Faq, Contact, Footer } from '@/components/sections/Closing'
+import Navbar from '@/components/layout/Navbar'
+import Footer from '@/components/layout/Footer'
+import Hero from '@/components/home/Hero'
+import Stats from '@/components/home/Stats'
+import Platform from '@/components/home/Platform'
+import Labs from '@/components/home/Labs'
+import Work from '@/components/home/Work'
+import Testimonials from '@/components/home/Testimonials'
+import Faq from '@/components/home/Faq'
+import Contact from '@/components/home/Contact'
 
 export default function Home() {
   return (
     <>
-      <Nav />
+      <Navbar />
       <Hero />
       <Stats />
       <Platform />

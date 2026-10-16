@@ -1,10 +1,11 @@
 'use client'
 
 import { useRef } from 'react'
-import { Reveal } from '@/hooks'
+import Reveal from '@/components/shared/Reveal'
 import { gsap, useGSAP, reducedMotion } from '@/lib/gsap'
-import { LABS_URL, labsServices, solutions, deliveryPhases, specs } from '@/data/content'
-import SectionHead from '@/components/ui/SectionHead'
+import { LABS_URL } from '@/lib/constants'
+import { labsServices, solutions, deliveryPhases, specs } from '@/data/content'
+import SectionHead from '@/components/shared/SectionHead'
 
 // Four phases on one track; the line fills as you scroll through it
 function Timeline() {

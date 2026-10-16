@@ -3,7 +3,8 @@
 import { useRef } from 'react'
 import type { ComponentType } from 'react'
 import { gsap, useGSAP, reducedMotion } from '@/lib/gsap'
-import { marquee, PLATFORM_URL, LABS_URL } from '@/data/content'
+import { PLATFORM_URL, LABS_URL } from '@/lib/constants'
+import { marquee } from '@/data/content'
 import LogoLoop from '@/components/ui/LogoLoop'
 
 // Line-art illustrations in the style of High Alpha's hero cards

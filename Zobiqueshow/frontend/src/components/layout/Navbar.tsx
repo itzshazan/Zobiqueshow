@@ -1,7 +1,8 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { LOGO, LABS_URL } from '@/data/content'
+import { LABS_URL } from '@/lib/constants'
+import Brand from '@/components/shared/Brand'
 
 const links: [label: string, href: string][] = [
   ['Platform', '#platform'],
@@ -10,13 +11,7 @@ const links: [label: string, href: string][] = [
   ['Contact', '#contact'],
 ]
 
-export function Brand() {
-  return (
-    <a href="#top" className="brand"><img src={LOGO} alt="" width="32" height="32" />zobique</a>
-  )
-}
-
-export default function Nav() {
+export default function Navbar() {
   const [open, setOpen] = useState(false)
 
   // Close the phone menu on Escape or when the screen grows past the breakpoint
