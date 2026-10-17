@@ -1,0 +1,68 @@
+[
+  {
+    "name": "National Career Service",
+    "logo": "/clients/ncs.png",
+    "scale": 1.92,
+    "consent": true
+  },
+  {
+    "name": "Bizowl",
+    "logo": "/clients/bizowl-logo.png",
+    "scale": 1.11,
+    "consent": true
+  },
+  {
+    "name": "Vastav Intellect",
+    "logo": "/clients/vastav-intellect-logo.png",
+    "scale": 1.33,
+    "consent": true
+  },
+  {
+    "name": "Ace10x",
+    "logo": "/clients/ace10x.png",
+    "scale": 1.38,
+    "consent": true
+  },
+  {
+    "name": "Hobfit",
+    "logo": "/clients/hobfit.png",
+    "scale": 1.24,
+    "consent": true
+  },
+  {
+    "name": "Appspine",
+    "logo": "/clients/appspine.png",
+    "scale": 1.07,
+    "consent": true
+  },
+  {
+    "name": "German Leap",
+    "logo": "/clients/german-leap.png",
+    "scale": 1.1,
+    "consent": true
+  },
+  {
+    "name": "Agnistoka",
+    "logo": "/clients/agnistoka.png",
+    "scale": 0.83,
+    "consent": true
+  },
+  {
+    "name": "Mera Nivas",
+    "logo": "/clients/mera-nivas.png",
+    "scale": 0.86,
+    "consent": true
+  },
+  {
+    "name": "Aipply",
+    "logo": "/clients/aipply.png",
+    "scale": 1.43,
+    "consent": true
+  },
+  {
+    "name": "Techcloud Ltd",
+    "logo": "/clients/techcloud.png",
+    "scale": 1.93,
+    "consent": true
+  }
+]

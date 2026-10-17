@@ -1,0 +1,64 @@
+{
+  "slug": "bizowl",
+  "title": "Marketplace module shipped on a new modular platform",
+  "outcome": "Bizowl moved to a modular platform with a marketplace module and its existing data carried over.",
+  "client": "Bizowl",
+  "owner": "labs",
+  "context": "Bizowl is building a Startup OS for India: one platform that brings together the services, people and resources founders need to start, run and grow a business. Its founder, Prashant Sirohi, wanted a product that connects those experiences into one system and can grow with the ecosystem.",
+  "problem": "Bizowl's first product, built on React, Node.js and Firebase, had become hard to extend: every new feature added complexity, and the codebase lacked the structure the product's ambitions needed. Users also weren't sure what the platform was for or what to do next.",
+  "built": "Instead of adding more features to the old foundation, we designed a new modular platform around reusable core services, shipped the marketplace module on it with a clearer purpose, redesigned navigation around clarity, and migrated existing client and partner data.",
+  "components": [
+    {
+      "name": "Modular architecture",
+      "detail": "Shared building blocks and reusable core services, on a stack chosen for long-term maintainability."
+    },
+    {
+      "name": "Marketplace module",
+      "detail": "Shipped with a clear role in the wider Bizowl ecosystem, so users know what they can do."
+    },
+    {
+      "name": "Experience redesign",
+      "detail": "Navigation rebuilt so people understand the platform and where to go next."
+    },
+    {
+      "name": "Data migration",
+      "detail": "Existing client and partner data carried over to the new platform."
+    }
+  ],
+  "flow": [
+    "Understand the vision",
+    "Design a modular foundation",
+    "Ship the marketplace",
+    "Migrate existing data"
+  ],
+  "result": "Marketplace module live on a new modular platform, with existing client and partner data migrated and a clearer experience for users.",
+  "resultDefinition": "Qualitative: delivery of a module, a data migration and a redesigned experience.",
+  "evidenceIds": [
+    "bizowl-platform"
+  ],
+  "canonicalUrl": null,
+  "liveUrl": "https://service.bizzowl.com",
+  "logo": "/clients/bizowl-logo.png",
+  "consent": true,
+  "screenshots": [
+    {
+      "src": "/screens/bizowl.jpg",
+      "width": 1422,
+      "height": 804,
+      "alt": "Bizowl's service marketplace: 'Unlock Your Business!' with service categories and browsable services",
+      "caption": "service.bizzowl.com"
+    }
+  ],
+  "cta": {
+    "label": "Talk to Zobique Labs",
+    "href": "https://labs.zobique.com/contact"
+  },
+  "order": 2,
+  "eyebrow": "Startup Ecosystem / Platform Engineering",
+  "card": {
+    "problem": "Bizowl's product had outgrown its architecture; new features were hard to add.",
+    "built": "A modular platform, a marketplace module and a clearer user experience.",
+    "result": "Marketplace module live, with existing data migrated.",
+    "resultDefinition": "Qualitative: delivery of a module and a data migration."
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "title": "Zobique Labs — AI systems built for your business",
+    "description": "Zobique Labs designs, builds and runs AI agents and automation inside client operations."
+  },
+  "heading": "Zobique Labs",
+  "intro": "Zobique Labs engineers AI systems that do real work inside other businesses. We map the workflow that costs your team time, design a system around how your operation actually runs, build it against your real data and tools, and keep it running after launch.",
+  "process": {
+    "heading": "How a project runs",
+    "steps": [
+      {
+        "title": "Discover",
+        "body": "Map the workflow, model the return, sketch the architecture."
+      },
+      {
+        "title": "Design",
+        "body": "Decide what the agent does, which tools it can use, and when it hands over to a person."
+      },
+      {
+        "title": "Build",
+        "body": "Build against your real data and tools, with integrations and testing."
+      },
+      {
+        "title": "Run",
+        "body": "Deploy, watch it in production, and keep tuning it."
+      }
+    ]
+  },
+  "examples": {
+    "heading": "What we build",
+    "items": [
+      {
+        "title": "Lead research and qualification",
+        "body": "Pipelines that research and score leads before your team spends time on them."
+      },
+      {
+        "title": "Sales and support agents",
+        "body": "Agents that answer, qualify and route, and escalate to a person when the case needs one."
+      },
+      {
+        "title": "Document processing",
+        "body": "Systems that read, extract and file documents so people don't have to retype them."
+      }
+    ],
+    "linkLabel": "Discuss this system",
+    "linkHref": "https://labs.zobique.com/contact"
+  },
+  "work": {
+    "heading": "Selected Labs work"
+  },
+  "cta": {
+    "heading": "Have a workflow in mind?",
+    "label": "Talk to Zobique Labs",
+    "href": "https://labs.zobique.com/contact"
+  },
+  "screenshot": {
+    "src": "/screens/labs.jpg",
+    "width": 1440,
+    "height": 710,
+    "alt": "labs.zobique.com homepage: 'Production AI Systems for Business'",
+    "caption": "labs.zobique.com"
+  },
+  "eyebrow": "A Zobique company"
+}

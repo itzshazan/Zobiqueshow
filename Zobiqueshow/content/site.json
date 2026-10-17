@@ -1,0 +1,52 @@
+{
+  "brandName": "Zobique",
+  "legalName": "Zobique Private Limited",
+  "brandLine": "AI that does real work.",
+  "url": "https://www.zobique.com",
+  "email": "contact@zobique.com",
+  "phone": "+91 81302 43850",
+  "phoneHref": "tel:+918130243850",
+  "address": {
+    "street": "Manav Rachna Campus Rd, Sector 43",
+    "locality": "Faridabad",
+    "region": "Haryana",
+    "country": "IN",
+    "display": "Manav Rachna Campus Rd, Sector 43, Faridabad, Haryana, India"
+  },
+  "logo": "/brand/zobique-mark.png",
+  "labs": {
+    "name": "Zobique Labs",
+    "url": "https://labs.zobique.com",
+    "contactUrl": "https://labs.zobique.com/contact",
+    "caseStudiesUrl": "/case-studies"
+  },
+  "founder": {
+    "name": "Rishab Chhetri",
+    "role": "Founder & CEO",
+    "evidenceId": "founder",
+    "story": null,
+    "photo": "/team/rishab-chhetri.jpg",
+    "linkedin": null
+  },
+  "socials": [
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/company/zobique"
+    },
+    {
+      "label": "X",
+      "url": "https://x.com/zobiqueai"
+    },
+    {
+      "label": "Instagram",
+      "url": "https://www.instagram.com/zobiqueai"
+    },
+    {
+      "label": "YouTube",
+      "url": "https://www.youtube.com/@zobique"
+    }
+  ],
+  "features": {
+    "insights": false
+  }
+}

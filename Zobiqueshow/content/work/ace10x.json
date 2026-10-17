@@ -1,0 +1,25 @@
+{
+  "slug": "ace10x",
+  "title": "Custom affiliate system for Ace10x",
+  "outcome": "A custom affiliate system replacing a SaaS subscription.",
+  "client": "Ace10x",
+  "owner": "labs",
+  "context": null,
+  "problem": "Ace10x paid for an affiliate SaaS that didn't fit how they work.",
+  "built": "A custom affiliate tracking system, piloted in parallel with the existing tool.",
+  "components": [],
+  "flow": [],
+  "result": "Rollout planned for 1 Nov 2026.",
+  "resultDefinition": "Hold: publish only after rollout is confirmed and the accuracy figure is defined.",
+  "evidenceIds": [
+    "ace10x-production"
+  ],
+  "canonicalUrl": "https://labs.zobique.com/case-studies",
+  "liveUrl": null,
+  "logo": null,
+  "consent": false,
+  "screenshots": [],
+  "cta": null,
+  "order": 4,
+  "eyebrow": "Zobique Labs"
+}

@@ -1,0 +1,60 @@
+{
+  "slug": "voicenity",
+  "name": "Voicenity",
+  "logo": "/brand/voicenity.png",
+  "mark": "/brand/voicenity-mark.png",
+  "category": "AI voice agents for lead qualification",
+  "oneLiner": "A voice agent that calls your leads, qualifies them in Hinglish, and tells your team who to call back.",
+  "audience": "Indian sales teams in real estate, education, legal, healthcare and service businesses.",
+  "problem": "Teams spend hours calling through lead lists before finding who is interested.",
+  "capabilities": [
+    "Calls leads and qualifies them in Hinglish or English",
+    "Five industry playbooks: real estate, education, legal, healthcare, service businesses",
+    "No-code setup, tested in the browser before going live",
+    "Handles interruptions mid-sentence (barge-in)",
+    "Several agents per account, each with its own setup",
+    "Per-agent dashboard of calls and qualification outcomes"
+  ],
+  "capabilitiesEvidenceId": "voicenity-capabilities",
+  "status": "early-access",
+  "url": "https://voicenity.zobique.com",
+  "ctaLabel": "Join early access",
+  "screenshots": [
+    {
+      "src": "/screens/voicenity.jpg",
+      "width": 1582,
+      "height": 740,
+      "alt": "Voicenity homepage: 'Every lead deserves a real conversation.' with Join waiting list and Contact Us buttons",
+      "caption": "voicenity.zobique.com"
+    }
+  ],
+  "proof": [],
+  "labsNote": "Need a voice system Voicenity doesn't cover? Zobique Labs builds custom ones.",
+  "order": 2,
+  "capabilityDetails": [
+    {
+      "title": "Hinglish and English",
+      "detail": "Calls your leads and qualifies them in either language."
+    },
+    {
+      "title": "Five industry playbooks",
+      "detail": "Real estate, education, legal, healthcare and service businesses."
+    },
+    {
+      "title": "No-code setup",
+      "detail": "Configure an agent and test it in the browser before going live."
+    },
+    {
+      "title": "Handles interruptions",
+      "detail": "Stops and listens when a caller cuts in mid-sentence."
+    },
+    {
+      "title": "Several agents",
+      "detail": "Each agent has its own setup, all in one account."
+    },
+    {
+      "title": "Per-agent dashboard",
+      "detail": "Calls and qualification outcomes for every agent."
+    }
+  ]
+}

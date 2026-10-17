@@ -1,0 +1,34 @@
+{
+  "products": {
+    "meta": {
+      "title": "Products — Zobique",
+      "description": "AI products Zobique builds, owns and runs: Career AI and Voicenity."
+    },
+    "heading": "Our products",
+    "intro": "AI products we build, own and run. Each one has its own home; this page is a short tour."
+  },
+  "work": {
+    "meta": {
+      "title": "Work — Zobique",
+      "description": "Selected work across Zobique's own products and the systems Zobique Labs builds for clients."
+    },
+    "heading": "Work",
+    "intro": "Systems we've shipped, across our own products and Zobique Labs. Each card says what was built and what changed, with the result defined.",
+    "filters": { "all": "All", "zobique": "Products", "labs": "Labs" },
+    "empty": "Nothing to show in this view yet."
+  },
+  "insights": {
+    "meta": { "title": "Insights — Zobique", "description": "Writing from the Zobique team." },
+    "heading": "Insights",
+    "empty": "No posts yet."
+  },
+  "notFound": {
+    "heading": "This page doesn't exist.",
+    "body": "It may have moved when zobique.com became the home of the whole company. Career AI now lives at careerai.zobique.com.",
+    "links": [
+      { "label": "Products", "href": "/products" },
+      { "label": "Zobique Labs", "href": "/labs" },
+      { "label": "Contact", "href": "/contact" }
+    ]
+  }
+}

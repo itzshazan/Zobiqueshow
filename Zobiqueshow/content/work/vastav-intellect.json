@@ -1,0 +1,64 @@
+{
+  "slug": "vastav-intellect",
+  "title": "About ₹0.80 estimated cost per researched lead",
+  "outcome": "A lead research pipeline that replaced manual research.",
+  "client": "Vastav Intellect",
+  "owner": "labs",
+  "context": "Vastav Intellect works in a specialised space where understanding a prospect matters as much as finding one. Two employees researched every incoming lead by hand, about ₹40,000 a month in staffing, and the work grew with every new lead.",
+  "problem": "The founder wanted to hand over a spreadsheet of leads and get back a short brief on each prospect and what to offer them. A general-purpose AI tool could do it for a few leads, but at hundreds or thousands it became too expensive.",
+  "built": "We costed the options first, then split lead research into three stages, each handled by the cheapest tool that does the job well, run by two workers on a Django and MongoDB backend.",
+  "components": [
+    {
+      "name": "Discover: Serper",
+      "detail": "Web search as its own stage, not bundled into an all-in-one AI research call."
+    },
+    {
+      "name": "Extract: Jina AI",
+      "detail": "Turns the pages found into usable material for analysis."
+    },
+    {
+      "name": "Interpret: Gemini",
+      "detail": "A lighter model classifies findings and spots opportunities without paying for premium reasoning on every step."
+    },
+    {
+      "name": "Two-worker execution",
+      "detail": "Research and processing run without blocking each other."
+    }
+  ],
+  "flow": [
+    "Upload a lead list",
+    "Search the web",
+    "Extract the content",
+    "Classify and brief the sales team"
+  ],
+  "result": "Estimated research cost fell to about ₹0.80 per lead, from about ₹2–₹3 with a web-search agent (roughly 60–73% less) and ₹5–₹8 with general-purpose AI research (up to about 90% less).",
+  "resultDefinition": "Our own estimates for this workflow, not independently audited. Actual cost depends on research depth, retries and usage.",
+  "evidenceIds": [
+    "vastav-cost"
+  ],
+  "canonicalUrl": null,
+  "liveUrl": null,
+  "logo": "/clients/vastav-intellect-logo.png",
+  "consent": true,
+  "screenshots": [
+    {
+      "src": "/screens/vastav.jpg",
+      "width": 1574,
+      "height": 561,
+      "alt": "VIIPS Lead Intelligence dashboard: lead queue with totals, research status, filters and bulk actions",
+      "caption": "Lead Intelligence dashboard built for Vastav Intellect (VIIPS)"
+    }
+  ],
+  "cta": {
+    "label": "Talk to Zobique Labs",
+    "href": "https://labs.zobique.com/contact"
+  },
+  "order": 3,
+  "eyebrow": "Specialised Services / Lead Intelligence",
+  "card": {
+    "problem": "Two people researched every lead by hand, about ₹40,000 a month.",
+    "built": "A three-stage research pipeline: search, extract, classify.",
+    "result": "About ₹0.80 per researched lead, versus ₹2–₹8 before.",
+    "resultDefinition": "Estimated API cost per lead, not audited."
+  }
+}

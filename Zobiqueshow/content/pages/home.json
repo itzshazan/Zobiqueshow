@@ -1,0 +1,356 @@
+{
+  "meta": {
+    "title": "Zobique — AI that does real work",
+    "description": "Zobique builds AI products and engineers the AI systems behind businesses. Products include Career AI and Voicenity; Zobique Labs builds agents and automation for teams."
+  },
+  "hero": {
+    "headline": "AI that does real work.",
+    "subline": "We build AI products, including one deployed for National Career Service users, and engineer AI systems for businesses.",
+    "sublineEvidenceIds": [
+      "ncs-deployment"
+    ],
+    "sublineFallback": "We build AI products and engineer AI systems for businesses.",
+    "primaryCta": {
+      "label": "Explore our products",
+      "href": "#products"
+    },
+    "secondaryCta": {
+      "label": "Build with Zobique Labs",
+      "href": "/labs"
+    },
+    "badges": [
+      {
+        "label": "AI products",
+        "variant": "solid"
+      },
+      {
+        "label": "Zobique Labs",
+        "variant": "ghost"
+      }
+    ]
+  },
+  "proof": [
+    {
+      "text": "Deployed for National Career Service users",
+      "href": "/case-studies/career-ai-ncs",
+      "evidenceId": "ncs-deployment"
+    },
+    {
+      "text": "Featured in India Today",
+      "href": "https://www.indiatoday.in/education-today/how-i-made-it/story/how-a-btech-student-turned-friends-career-questions-into-the-ai-startup-zobique-2949089-2026-07-16",
+      "evidenceId": "india-today"
+    },
+    {
+      "text": "Client systems in production",
+      "href": "/case-studies",
+      "evidenceId": "client-count"
+    }
+  ],
+  "engines": {
+    "heading": "One company, two engines",
+    "products": {
+      "title": "Products",
+      "body": "AI products we build, own and run. Each has its own home.",
+      "link": {
+        "label": "See our products",
+        "href": "/products"
+      }
+    },
+    "labs": {
+      "title": "Zobique Labs",
+      "body": "AI systems we engineer for your business — agents, automation, research pipelines — built around how your operation actually works.",
+      "link": {
+        "label": "Meet Zobique Labs",
+        "href": "/labs"
+      }
+    },
+    "connector": "What we learn running our own products goes into every system we build for clients."
+  },
+  "products": {
+    "heading": "Our products"
+  },
+  "labs": {
+    "heading": "Have a workflow that eats your team's time?",
+    "body": "We map the workflow, build the AI system around it, and keep it running.",
+    "cta": {
+      "label": "Talk to Zobique Labs",
+      "href": "https://labs.zobique.com/contact"
+    },
+    "features": {
+      "keyBenefitsLabel": "Key Benefits:",
+      "tabs": [
+        {
+          "key": "sales",
+          "label": "AI Sales Agent",
+          "icon": "target",
+          "tone": "orange",
+          "title": "Turn sales operations into a revenue engine.",
+          "body": "AI agents qualify leads, enrich data and keep your pipeline moving.",
+          "benefits": [
+            "Lead Qualification",
+            "CRM Automation",
+            "Email & Follow-Up"
+          ],
+          "link": {
+            "label": "Explore AI Sales Agent",
+            "href": "https://labs.zobique.com/solutions/ai-sales-agent"
+          },
+          "image": {
+            "src": "/labs/ai-sales-agent.jpg",
+            "width": 1024,
+            "height": 1536,
+            "alt": "Illustration of an AI sales agent qualifying a lead, updating a CRM pipeline and scheduling a follow-up",
+            "fit": "contain"
+          }
+        },
+        {
+          "key": "support",
+          "label": "AI Customer Support",
+          "icon": "headset",
+          "tone": "orange",
+          "title": "Resolve issues faster, keep the human touch.",
+          "body": "AI support answers common questions and routes complex tickets to the right person.",
+          "benefits": [
+            "Ticket Classification",
+            "Knowledge Retrieval",
+            "Human Escalation"
+          ],
+          "link": {
+            "label": "Explore AI Customer Support",
+            "href": "https://labs.zobique.com/solutions/ai-customer-support"
+          },
+          "image": {
+            "src": "/labs/ai-customer-support.jpg",
+            "width": 1024,
+            "height": 1536,
+            "fit": "contain",
+            "alt": "AI Customer Support illustration: a friendly support robot above a ticket dashboard with a resolved follow-up"
+          }
+        },
+        {
+          "key": "documents",
+          "label": "Document AI",
+          "icon": "file",
+          "tone": "green",
+          "title": "Turn paper-heavy work into automated systems.",
+          "body": "Extract, classify and route data from contracts, invoices, forms and PDFs.",
+          "benefits": [
+            "Invoice Processing",
+            "Contract Analysis",
+            "Forms & Intake Automation"
+          ],
+          "link": {
+            "label": "Explore Document AI",
+            "href": "https://labs.zobique.com/solutions/document-ai"
+          },
+          "image": {
+            "src": "/labs/document-ai.jpg",
+            "width": 1024,
+            "height": 1536,
+            "fit": "contain",
+            "alt": "Document AI illustration: PDFs, spreadsheets, images and documents flow into an AI processor that extracts fields into a review dashboard"
+          }
+        },
+        {
+          "key": "apps",
+          "label": "AI Applications",
+          "icon": "layers",
+          "tone": "blue",
+          "title": "Custom AI products built for your use case.",
+          "body": "AI applications built around your workflow, from productivity tools to autonomous systems.",
+          "benefits": [
+            "AI Integration Services",
+            "AI Model Training & Fine-Tuning",
+            "AI Maintenance & Optimization"
+          ],
+          "link": {
+            "label": "Explore AI Application Development",
+            "href": "https://labs.zobique.com/services/ai-application-development"
+          },
+          "image": {
+            "src": "/labs/ai-applications.jpg",
+            "width": 1024,
+            "height": 1536,
+            "fit": "contain",
+            "alt": "AI Applications illustration: documents, images, data, settings and users connect to an AI model that powers an analytics dashboard"
+          }
+        }
+      ]
+    }
+  },
+  "work": {
+    "heading": "Selected work",
+    "cta": {
+      "label": "See all work",
+      "href": "/case-studies"
+    }
+  },
+  "closing": {
+    "heading": "What would you like to do?",
+    "options": [
+      {
+        "label": "Start a project",
+        "body": "Tell Zobique Labs about the workflow.",
+        "href": "https://labs.zobique.com/contact"
+      },
+      {
+        "label": "Try a product",
+        "body": "Career AI is live; Voicenity is in early access.",
+        "href": "/products"
+      },
+      {
+        "label": "Partner with us",
+        "body": "Institutions, press and partnerships.",
+        "href": "/contact"
+      }
+    ]
+  },
+  "workflow": {
+    "heading": "How we build",
+    "intro": "How a business problem becomes a system that runs: workflow analysis, architecture, build, deployment, and the tuning that follows.",
+    "phases": [
+      {
+        "name": "Discover",
+        "title": "Map the Workflow. Find the AI Opportunity.",
+        "body": "We sit with the operation, trace where work actually slows down, and identify which steps an AI system can take over without breaking the process around them.",
+        "items": [
+          "Workflow audit and bottleneck identification",
+          "Feasibility, ROI modeling, and model selection",
+          "System architecture blueprint and delivery timeline"
+        ],
+        "primary": {
+          "label": "Explore a Workflow",
+          "href": "https://labs.zobique.com/contact"
+        },
+        "secondary": {
+          "label": "See what we build",
+          "href": "https://labs.zobique.com/"
+        },
+        "image": {
+          "src": "/labs/phase-discover.jpg",
+          "width": 1672,
+          "height": 941,
+          "alt": "Discover: a flat app window on orange showing a six-step workflow map with the fourth step highlighted in orange as the bottleneck, above a bar breakdown and a rising trend line"
+        }
+      },
+      {
+        "name": "Design",
+        "title": "Design the System. Define the Guardrails.",
+        "body": "We turn that map into a system architecture: agent behaviour, tool access, escalation paths, and the interfaces the people around the system will actually use.",
+        "items": [
+          "Human-in-the-loop interaction design and escalation paths",
+          "Agent architecture, tool access, and permission boundaries",
+          "Working prototypes validated against the real workflow"
+        ],
+        "primary": {
+          "label": "See what we build",
+          "href": "https://labs.zobique.com/"
+        },
+        "secondary": {
+          "label": "See Case Studies",
+          "href": "/case-studies"
+        },
+        "image": {
+          "src": "/labs/phase-design.jpg",
+          "width": 1672,
+          "height": 941,
+          "alt": "Design: a flat app window on orange showing an AI agent connected to a database, a document and an integration inside a dashed orange guardrail with a padlock, and an orange arrow handing over to a person outside it"
+        }
+      },
+      {
+        "name": "Build",
+        "title": "Build It. Connect It. Ship It.",
+        "body": "We build the system against your real data and real tools: agent pipelines, retrieval, integrations, and the infrastructure it runs on.",
+        "items": [
+          "Application layer, cloud infrastructure, and API integrations",
+          "Agent pipelines, custom RAG, and private model fine-tuning",
+          "Access controls, automated testing, and strict type safety"
+        ],
+        "primary": {
+          "label": "See What We've Built",
+          "href": "/case-studies"
+        },
+        "secondary": {
+          "label": "Start a conversation",
+          "href": "https://labs.zobique.com/contact"
+        },
+        "image": {
+          "src": "/labs/phase-build.jpg",
+          "width": 1672,
+          "height": 941,
+          "alt": "Build: a flat app window on orange with a dark code editor on the left and a four-step build pipeline on the right, three steps ticked in black and the final step ticked in orange"
+        }
+      },
+      {
+        "name": "Launch & Evolve",
+        "title": "Deploy to Production. Keep It Working.",
+        "body": "We deploy without downtime, watch what the system does against live traffic, and keep tuning it as the business and the models change underneath it.",
+        "items": [
+          "Zero-downtime deployment and cloud provisioning",
+          "Telemetry, agent observability, and latency tuning",
+          "Model retraining, iteration, and A/B testing"
+        ],
+        "primary": {
+          "label": "Build an AI System",
+          "href": "https://labs.zobique.com/contact"
+        },
+        "secondary": {
+          "label": "Talk to an engineer",
+          "href": "https://labs.zobique.com/contact"
+        },
+        "image": {
+          "src": "/labs/phase-launch.jpg",
+          "width": 1672,
+          "height": 941,
+          "alt": "Launch and evolve: a flat app window on orange with a live indicator, three small trend tiles and a wide chart with an orange line rising steadily, beside a refresh symbol for continuous tuning"
+        }
+      }
+    ]
+  },
+  "partners": {
+    "heading": "Trusted partners",
+    "intro": "Teams we have built for, across our products and Zobique Labs."
+  },
+  "featured": {
+    "heading": "Featured",
+    "items": [
+      {
+        "kind": "Press",
+        "outlet": "India Today",
+        "title": "How answering friends' career questions led me to build an AI startup in college",
+        "date": "16 Jul 2026",
+        "href": "https://www.indiatoday.in/education-today/how-i-made-it/story/how-a-btech-student-turned-friends-career-questions-into-the-ai-startup-zobique-2949089-2026-07-16",
+        "cta": "Read the article",
+        "evidenceId": "india-today"
+      },
+      {
+        "kind": "Live deployment",
+        "outlet": "National Career Service",
+        "logo": "/clients/ncs.png",
+        "title": "Career AI, deployed for National Career Service users",
+        "href": "https://ncs.zobique.com/",
+        "cta": "Visit the service",
+        "evidenceId": "ncs-deployment"
+      },
+      {
+        "kind": "Founder feature",
+        "outlet": "Rising Startup",
+        "handle": "@risingstartup",
+        "title": "How Rishab Chhetri built Zobique from his friends' career questions",
+        "href": "https://www.instagram.com/p/DcQyVxXEktV/",
+        "cta": "See the post",
+        "evidenceId": "risingstartup-feature"
+      },
+      {
+        "kind": "Founder feature",
+        "outlet": "Startup By Vstdy",
+        "handle": "@startupbyvstdy",
+        "title": "A profile of Rishab Chhetri, the student founder behind Zobique",
+        "date": "20 Aug 2026",
+        "href": "https://www.instagram.com/p/DcQ1OqmD_-s/",
+        "cta": "See the post",
+        "evidenceId": "startupbyvstdy-feature"
+      }
+    ]
+  }
+}
