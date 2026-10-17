@@ -1,0 +1,37 @@
+# Zobique
+
+> Zobique is an AI company based in Faridabad, India. It builds and runs its own AI products, and its engineering arm, Zobique Labs, builds AI agents, automation and research pipelines for other businesses.
+
+Zobique is the parent company behind two live products and a product-engineering practice. What the team learns running its own AI products in production feeds directly into the systems it builds for clients.
+
+## Products (built, owned and run by Zobique)
+
+- [Zobique Career AI](https://careerai.zobique.com): Career guidance, AI job matching, resume tools, an ATS checker and interview prep for students and early-career professionals. Deployed for National Career Service users.
+- [Voicenity](https://voicenity.zobique.com): A voice agent that calls leads, qualifies them in Hinglish or English, and tells sales teams who to call back. Built for Indian sales teams in real estate, education, legal, healthcare and service businesses.
+
+## Zobique Labs (AI systems engineered for other businesses)
+
+- [Zobique Labs](https://labs.zobique.com): Zobique's engineering arm. Maps a client's workflow, designs an AI system around it, builds it against the client's real data and tools, and keeps it running after launch.
+- What Labs builds: lead research and qualification pipelines, sales and support agents, and document-processing systems.
+- How a project runs: Discover (map the workflow, model the return, sketch the architecture) -> Design (decide what the agent does, which tools it uses, when it hands over to a person) -> Build (against real data and tools, with integrations and testing) -> Run (deploy, watch it in production, keep tuning it).
+
+## Company pages
+
+- [Home](https://www.zobique.com): What Zobique builds — its own AI products and the AI systems it engineers for clients.
+- [Products](https://www.zobique.com/products): Overview of Zobique's own products, Career AI and Voicenity.
+- [Zobique Labs](https://www.zobique.com/labs): What Zobique Labs builds for client businesses and how a project runs.
+- [Case studies](https://www.zobique.com/case-studies): Deployments and outcomes for Zobique's own products and for Zobique Labs clients.
+- [About](https://www.zobique.com/about): Company story and founder.
+- [Contact](https://www.zobique.com/contact): How to reach Zobique, or Zobique Labs directly for a project.
+
+## Target audience
+
+- Businesses with a manual, repetitive workflow (lead qualification, sales calls, support, document handling) looking to have an AI system built for it.
+- Students and early-career professionals using Zobique Career AI.
+- Sales teams in real estate, education, legal, healthcare and service businesses evaluating Voicenity.
+
+## Note on zobique.com subdomains
+
+- careerai.zobique.com and voicenity.zobique.com are Zobique's own products, each with its own site and its own SEO.
+- labs.zobique.com is Zobique Labs' own site, with its full service catalogue and client case studies.
+- www.zobique.com (this site) is the parent company site: what Zobique is, its two products, and Zobique Labs.

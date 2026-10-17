@@ -14,7 +14,6 @@ export default function HomePage() {
   const work = getWork().slice(0, 1)
   const featured = home.featured.items.filter((f) => isVerified(f.evidenceId))
   const subline = isVerified(...home.hero.sublineEvidenceIds) ? home.hero.subline : home.hero.sublineFallback
-  const [careerAi, voicenity] = products
 
   return (
     <>
@@ -34,7 +33,10 @@ export default function HomePage() {
           </SmartLink>
         </div>
         <div className="wz-media">
-          <img src="/screens/hero.jpg" alt="A hand holding a phone running Zobique AI agents, with a live activity feed of qualified leads and scheduled follow-ups, above a bicycle basket" width={1672} height={941} fetchPriority="high" />
+          <picture>
+            <source media="(max-width: 640px)" srcSet="/screens/zobique_hero_small.png" />
+            <img src="/screens/zobique_hero_large.png" alt="Zobique product screens showing AI agents at work" width={1942} height={809} fetchPriority="high" />
+          </picture>
         </div>
       </section>
 

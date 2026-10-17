@@ -1,0 +1,77 @@
+# Zobique — Full Documentation
+
+## What Zobique is
+
+Zobique is an AI company based in Faridabad, Haryana, India. It builds and runs its own AI products, and through its engineering arm, Zobique Labs, it designs, builds and runs AI agents, automation and research pipelines inside other businesses' operations.
+
+Running its own products in production — matching people to jobs, generating documents, talking to people at scale by voice — teaches Zobique what it takes to keep an AI system working in a real operation. Zobique Labs brings that operating experience into client systems. When the same problem shows up for several clients, the solution can become reusable product capability.
+
+Founded by Rishab Chhetri (Founder & CEO).
+
+## Products (built, owned and run by Zobique)
+
+### Zobique Career AI
+- URL: https://careerai.zobique.com
+- Category: AI career intelligence
+- What it does: Career guidance, AI job matching, an AI resume builder, an ATS compatibility checker, interview prep and a career roadmap for students and early-career professionals, plus placement intelligence for the universities and placement cells that support them.
+- Status: Live
+- Proof: Deployed for National Career Service users at ncs.zobique.com — Zobique's own career tools run for users of India's national employment platform. Featured in India Today (16 Jul 2026): "How answering friends' career questions led me to build an AI startup in college."
+- Note: this product has its own site and its own SEO; treat careerai.zobique.com as the canonical source for Career AI content, not this parent-company site.
+
+### Voicenity
+- URL: https://voicenity.zobique.com
+- Category: AI voice agents for lead qualification
+- What it does: A voice agent that calls a business's leads, qualifies them in Hinglish or English, and tells the sales team who to call back. Five industry playbooks (real estate, education, legal, healthcare, service businesses), no-code setup tested in the browser before going live, handles interruptions mid-sentence (barge-in), supports several agents per account each with its own setup, and gives a per-agent dashboard of calls and qualification outcomes.
+- Audience: Indian sales teams in real estate, education, legal, healthcare and service businesses.
+- Status: Early access.
+- Note: this product has its own site; treat voicenity.zobique.com as the canonical source for Voicenity content.
+
+## Zobique Labs — AI systems engineered for other businesses
+
+- URL: https://labs.zobique.com
+- What Labs does: maps the workflow that costs a client's team time, designs a system around how the operation actually runs, builds it against the client's real data and tools, and keeps it running after launch.
+
+What Labs builds:
+- Lead research and qualification: pipelines that research and score leads before the client's team spends time on them.
+- Sales and support agents: agents that answer, qualify and route, and escalate to a person when the case needs one.
+- Document processing: systems that read, extract and file documents so people don't have to retype them.
+
+How a Labs project runs:
+1. Discover — map the workflow, model the return, sketch the architecture.
+2. Design — decide what the agent does, which tools it can use, and when it hands over to a person.
+3. Build — build against the client's real data and tools, with integrations and testing.
+4. Run — deploy, watch it in production, and keep tuning it.
+
+Note: Zobique Labs' full service catalogue and client case studies are canonical on labs.zobique.com, not this parent-company site.
+
+## Selected case studies
+
+- Career AI for National Career Service (owner: Zobique): Zobique's own career tools run for users of India's national employment platform at ncs.zobique.com. See https://www.zobique.com/case-studies/career-ai-ncs
+- Lead research pipeline for Vastav Intellect (owner: Zobique Labs): a lead research pipeline that replaced manual research, at an estimated cost of about ₹0.80 per researched lead. See https://www.zobique.com/case-studies/vastav-intellect
+- Modular platform with marketplace module for Bizowl (owner: Zobique Labs): Bizowl moved to a modular platform with a marketplace module, with its existing data carried over. See https://www.zobique.com/case-studies/bizowl
+- Custom affiliate system for Ace10x (owner: Zobique Labs): a custom affiliate system that replaced a SaaS subscription. Canonical case study on labs.zobique.com.
+
+## Company pages (this site, www.zobique.com)
+
+- [Home](https://www.zobique.com): What Zobique builds — its own AI products and the AI systems it engineers for clients.
+- [Products](https://www.zobique.com/products): Overview of Zobique's own products, Career AI and Voicenity.
+- [Zobique Labs](https://www.zobique.com/labs): What Zobique Labs builds for client businesses and how a project runs.
+- [Case studies](https://www.zobique.com/case-studies): Deployments and outcomes for Zobique's own products and for Zobique Labs clients.
+- [About](https://www.zobique.com/about): Company story and founder.
+- [Contact](https://www.zobique.com/contact): How to reach Zobique, or Zobique Labs directly for a project.
+- [Privacy](https://www.zobique.com/privacy) / [Terms](https://www.zobique.com/terms): Legal pages.
+
+## Target audience
+
+- Businesses with a manual, repetitive workflow (lead qualification, sales calls, support, document handling) evaluating whether to have an AI system built for it.
+- Students and early-career professionals using Zobique Career AI.
+- Universities and placement cells evaluating Career AI's placement intelligence.
+- Sales teams in real estate, education, legal, healthcare and service businesses evaluating Voicenity.
+
+## Domain structure (for crawlers and AI assistants)
+
+- www.zobique.com (this site) — the parent company: what Zobique is, its two products, and Zobique Labs. Start here for general questions about "Zobique" as a company.
+- careerai.zobique.com — Zobique Career AI product site, canonical for all Career AI content and features.
+- voicenity.zobique.com — Voicenity product site, canonical for all Voicenity content and features.
+- labs.zobique.com — Zobique Labs site, canonical for the Labs service catalogue and Labs client case studies.
+- ncs.zobique.com — Career AI as deployed for National Career Service users (a Career AI deployment, not a separate product).

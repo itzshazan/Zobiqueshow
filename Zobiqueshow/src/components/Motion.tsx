@@ -31,13 +31,11 @@ export default function Motion() {
           gsap.from(lines, { yPercent: 110, duration: 1, ease: 'power4.out', stagger: 0.14 })
           gsap.from('.wz-sub, .wz-btn', { y: 24, opacity: 0, duration: 0.8, ease, stagger: 0.1, delay: 0.45 })
         }
-        // Home hero image: rises in, grows to full width as you scroll, photo drifts inside the frame
+        // Home hero image: rises in, grows to full width as you scroll
         const media = document.querySelector<HTMLElement>('.wz-media')
         if (media) {
           gsap.from(media, { y: 90, opacity: 0, duration: 1.2, ease: 'power4.out', delay: 0.35 })
           gsap.fromTo(media, { scale: 0.94 }, { scale: 1, ease: 'none', scrollTrigger: { trigger: media, start: 'top 85%', end: 'top 15%', scrub: true } })
-          const img = media.querySelector('img')
-          if (img) gsap.fromTo(img, { scale: 1.12, yPercent: -4 }, { yPercent: 4, ease: 'none', scrollTrigger: { trigger: media, start: 'top bottom', end: 'bottom top', scrub: true } })
         }
 
         // Partner logos drop in one after another

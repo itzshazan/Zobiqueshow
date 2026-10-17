@@ -264,11 +264,11 @@ export function CtaBand({ id, heading, intro, options, location }: { id: string;
         {intro && <p className="cta-intro">{intro}</p>}
         <ul className="cta-checks">
           {options.map((o) => (
-            <li key={o.label}><CheckCircle className="cta-check" />{o.body}</li>
+            <li key={o.body}><CheckCircle className="cta-check" />{o.body}</li>
           ))}
         </ul>
         <div className="cta-buttons">
-          {options.map((o, i) => (
+          {options.filter((o) => o.href && o.label).map((o, i) => (
             <SmartLink
               key={o.label}
               href={o.href}

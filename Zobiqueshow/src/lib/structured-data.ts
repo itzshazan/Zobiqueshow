@@ -1,5 +1,5 @@
 import type { Product, WorkItem } from './types'
-import { site } from './content'
+import { getProducts, site } from './content'
 
 const abs = (path: string) => new URL(path, site.url).toString()
 
@@ -21,7 +21,9 @@ export function organizationLd() {
       addressRegion: site.address.region,
       addressCountry: site.address.country,
     },
-    sameAs: site.socials.map((s) => s.url),
+    // Other official Zobique properties, so Google ties them to this same entity
+    // rather than reading labs./careerai./voicenity.zobique.com as unrelated sites.
+    sameAs: [...site.socials.map((s) => s.url), site.labs.url, ...getProducts().map((p) => p.url)],
     subOrganization: { '@type': 'Organization', name: site.labs.name, url: site.labs.url },
   }
 }
