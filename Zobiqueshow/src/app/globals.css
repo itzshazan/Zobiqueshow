@@ -13,12 +13,11 @@
   --muted: #6b7280;
   --line: #e5e7eb;            /* gray-200 */
   --line-strong: #d1d5db;     /* gray-300 */
-  /* Brand orange #f55036 scores 3.45:1 with white, below WCAG AA for normal text.
-     It stays for the mark, accents and highlights; buttons and links use a deeper
-     zobique orange that passes (5.5:1). */
+  /* One orange everywhere: the logo colour. Note it scores 3.45:1 with white,
+     below WCAG AA (4.5:1) for normal-size text such as button labels and links. */
   --brand: #f55036;
-  --accent: #c2361f;
-  --accent-hover: #a52d19;
+  --accent: #f55036;
+  --accent-hover: #dc4128;
   --accent-deco: #f55036;
   --on-accent: #ffffff;
   --brand-tint: #fef1ee;
@@ -124,6 +123,9 @@ p { max-width: 64ch; }
   transition: background-color 0.3s, border-color 0.3s;
 }
 /* Home page, while over the orange hero: same orange, dark-brown links like the hero copy */
+/* backdrop-filter makes the header the containing block for the fixed mobile menu,
+   which would clip it to the bar's height; drop it while the menu is open */
+.site-header.is-menu-open { backdrop-filter: none; background: #fff; }
 .site-header.is-on-hero { background: var(--brand); backdrop-filter: none; border-bottom-color: transparent; }
 .is-on-hero .brand { color: #fff; }
 .is-on-hero .brand img { border-radius: 50%; box-shadow: 0 0 0 2px #fff; }
@@ -180,7 +182,9 @@ p { max-width: 64ch; }
   padding: 16px var(--gutter) 32px; overflow-y: auto; display: flex; flex-direction: column;
 }
 .mobile-menu a:not(.btn) { padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 21px; font-weight: 600; color: var(--heading); text-decoration: none; }
-.mobile-menu .sub a:not(.btn) { font-family: var(--font-body); font-size: 17px; padding-left: 16px; }
+.mobile-menu a:not(.btn) { display: block; }
+.mobile-menu .sub { border-bottom: 1px solid var(--line); padding: 4px 0 8px; }
+.mobile-menu .sub a:not(.btn) { font-family: var(--font-body); font-size: 17px; font-weight: 500; color: var(--ink-soft); padding: 9px 0 9px 16px; border-bottom: 0; }
 .mobile-menu .btn { margin-top: 24px; width: 100%; }
 
 @media (max-width: 880px) {
@@ -233,8 +237,8 @@ p { max-width: 64ch; }
 .product-card .shot-frame img { width: 100%; height: 100%; object-fit: cover; object-position: top center; border-radius: 0; transition: transform 0.4s; }
 .product-card:hover .shot-frame img { transform: scale(1.02); }
 .product-body { display: flex; flex-direction: column; gap: 8px; padding: 20px 24px; flex: 1; }
-.product-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
-.product-id { display: flex; align-items: center; gap: 10px; }
+.product-top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 12px; }
+.product-id { display: flex; align-items: center; gap: 10px; min-width: 0; }
 .product-id img { height: 32px; width: auto; max-width: 120px; object-fit: contain; }
 .product-id h3 { font-size: 24px; }
 .product-category { font-size: 14px; font-weight: 500; color: var(--accent); }
@@ -463,7 +467,7 @@ p { max-width: 64ch; }
    the gradient ends deeper than zobique.com's so white text keeps its contrast. */
 .cta-band {
   position: relative; overflow: hidden; text-align: center; color: #fff; border-radius: 16px;
-  background: linear-gradient(to bottom right, #e04730, #c2361f);
+  background: var(--brand);
   box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
 }
 .cta-orb { position: absolute; border-radius: 50%; background: rgb(255 255 255 / 0.1); pointer-events: none; }
@@ -472,8 +476,9 @@ p { max-width: 64ch; }
 .cta-inner { position: relative; z-index: 1; max-width: 56rem; margin: 0 auto; padding: clamp(48px, 6vw, 64px) clamp(24px, 5vw, 48px); }
 .cta-band h2 { color: #fff; font-size: clamp(30px, 4vw, 48px); margin-bottom: 24px; }
 .cta-intro { max-width: 48rem; margin: 0 auto 32px; font-size: 19px; font-weight: 700; color: #fff; }
-.cta-checks { display: grid; gap: 16px; margin-bottom: 32px; }
-.cta-checks li { display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 19px; font-weight: 700; }
+.cta-checks { display: grid; gap: 14px; width: fit-content; max-width: 100%; margin: 0 auto 32px; } /* left-aligned list, centred as a block */
+.cta-checks li { display: flex; align-items: flex-start; gap: 10px; text-align: left; font-size: 19px; font-weight: 700; }
+.cta-checks li svg { flex: none; margin-top: 0.2em; }
 .cta-check { width: 20px; height: 20px; flex: none; }
 .cta-buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; }
 .cta-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 52px; padding: 0 28px; border-radius: 8px; font-size: 18px; font-weight: 600; text-decoration: none; transition: background-color 0.2s; }
@@ -482,7 +487,7 @@ p { max-width: 64ch; }
 .cta-btn-ghost { border: 1px solid #fff; color: #fff; background: rgb(255 255 255 / 0.1); }
 .cta-btn-ghost:hover { background: rgb(255 255 255 / 0.2); }
 .cta-band :focus-visible { outline-color: #fff; outline-offset: 4px; }
-@media (max-width: 640px) { .cta-buttons { flex-direction: column; } .cta-btn { width: 100%; } .cta-checks li { font-size: 17px; } }
+@media (max-width: 640px) { .cta-buttons { flex-direction: column; } .cta-btn { width: 100%; } .cta-checks li { font-size: 16px; font-weight: 600; } .cta-intro { font-size: 16px; font-weight: 600; margin-bottom: 24px; } .cta-band h2 { margin-bottom: 16px; } }
 
 /* labs.zobique.com testimonial card (renders only with consent) */
 .testimonial-card { padding: 24px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
@@ -587,7 +592,8 @@ p { max-width: 64ch; }
   .ft-list-wrap { position: relative; }
   .ft-list-wrap::after { content: ''; position: absolute; top: 0; bottom: 0; width: 32px; z-index: 1; pointer-events: none; }
   .ft-list-wrap::after { right: 0; background: linear-gradient(270deg, var(--bg), transparent); }
-  .ft-list { flex-direction: row; gap: 12px; overflow-x: auto; padding: 8px 2px; border-radius: 0; background: none; scrollbar-width: none; scroll-padding-inline: 2px; }
+  /* flex-start: centred overflow spills off the left edge where it can't be scrolled to */
+  .ft-list { flex-direction: row; justify-content: flex-start; gap: 12px; overflow-x: auto; padding: 8px 2px; border-radius: 0; background: none; scrollbar-width: none; scroll-padding-inline: 2px; }
   .ft-list::-webkit-scrollbar { display: none; }
   .ft-tab { flex: none; width: auto; gap: 8px; padding: 12px 16px; border: 2px solid var(--line); border-radius: 8px; background: var(--bg-alt); }
   .ft-tab:hover { border-color: var(--line-strong); border-left-color: var(--line-strong); }
@@ -837,7 +843,7 @@ p { max-width: 64ch; }
 .pp-cta {
   display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px;
   padding: clamp(28px, 4vw, 44px); border-radius: 20px; color: #fff;
-  background: linear-gradient(to bottom right, #e04730, #c2361f); box-shadow: var(--shadow-lg);
+  background: var(--brand); box-shadow: var(--shadow-lg);
 }
 .pp-cta h2 { color: #fff; font-size: clamp(26px, 3vw, 36px); }
 .pp-cta p { margin-top: 6px; color: #fff; font-weight: 600; max-width: 52ch; }
@@ -1177,3 +1183,22 @@ p { max-width: 64ch; }
   .feat-mark { min-height: 120px; border-right: 0; border-bottom: 1px solid var(--line); }
 }
 @media (prefers-reduced-motion: reduce) { .feat-card, .feat-arrow { transition: none; } }
+
+/* Phone fixes from the 390px audit */
+@media (max-width: 640px) {
+  .section-head { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .product-id h3 { font-size: 21px; }
+  .eng2-shot { width: 80%; }
+  .eng2-shot-bar .chip { display: none; }
+}
+
+/* Labs cards on phones/tablets, zobique.com style: image edge to edge on top (cropped to a
+   wide strip), then title, description, ticks and link. Desktop still shows images whole. */
+@media (max-width: 1023px) {
+  .ft-pinned .ft-card { display: flex; flex-direction: column; gap: 0; padding: 0; overflow: hidden; border-radius: 16px; }
+  .ft-pinned .ft-visual, .ft-pinned .ft-visual.is-contain { order: -1; position: relative; align-self: stretch; width: 100%; aspect-ratio: 16 / 10; min-height: 0; border-radius: 0; box-shadow: none; background: var(--brand-tint); }
+  .ft-pinned .ft-visual.is-contain img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 45%; }
+  .ft-pinned .ft-body { padding: 22px 22px 26px; }
+  .ft-pinned .ft-icon-lg { display: none; }
+  .ft-pinned .ft-body h3 { font-size: 24px; line-height: 1.2; }
+}

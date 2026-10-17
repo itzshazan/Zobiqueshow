@@ -46,7 +46,11 @@ export default function FeatureTabs({ tabs, keyBenefitsLabel, idPrefix }: { tabs
     const chip = chipRefs.current[active]
     const list = listRef.current
     if (chip && list && list.scrollWidth > list.clientWidth) {
-      list.scrollTo({ left: chip.offsetLeft - 16, behavior: 'smooth' })
+      // Measure against the list itself (offsetLeft is relative to the padded sticky wrapper)
+      // and centre the chip; the browser clamps to 0 for the first one
+      const lr = list.getBoundingClientRect()
+      const cr = chip.getBoundingClientRect()
+      list.scrollTo({ left: list.scrollLeft + (cr.left - lr.left) - (lr.width - cr.width) / 2, behavior: 'smooth' })
     }
   }, [active])
 

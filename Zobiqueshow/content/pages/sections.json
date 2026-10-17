@@ -9,16 +9,23 @@
   },
   "work": {
     "meta": {
-      "title": "Work — Zobique",
+      "title": "Case Studies — Zobique",
       "description": "Selected work across Zobique's own products and the systems Zobique Labs builds for clients."
     },
-    "heading": "Work",
+    "heading": "Case Studies",
     "intro": "Systems we've shipped, across our own products and Zobique Labs. Each card says what was built and what changed, with the result defined.",
-    "filters": { "all": "All", "zobique": "Products", "labs": "Labs" },
+    "filters": {
+      "all": "All",
+      "zobique": "Products",
+      "labs": "Labs"
+    },
     "empty": "Nothing to show in this view yet."
   },
   "insights": {
-    "meta": { "title": "Insights — Zobique", "description": "Writing from the Zobique team." },
+    "meta": {
+      "title": "Insights — Zobique",
+      "description": "Writing from the Zobique team."
+    },
     "heading": "Insights",
     "empty": "No posts yet."
   },
@@ -26,9 +33,18 @@
     "heading": "This page doesn't exist.",
     "body": "It may have moved when zobique.com became the home of the whole company. Career AI now lives at careerai.zobique.com.",
     "links": [
-      { "label": "Products", "href": "/products" },
-      { "label": "Zobique Labs", "href": "/labs" },
-      { "label": "Contact", "href": "/contact" }
+      {
+        "label": "Products",
+        "href": "/products"
+      },
+      {
+        "label": "Zobique Labs",
+        "href": "/labs"
+      },
+      {
+        "label": "Contact",
+        "href": "/contact"
+      }
     ]
   }
 }

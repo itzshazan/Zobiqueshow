@@ -136,7 +136,7 @@ export default function Header({ brandName, logo, products }: HeaderProps) {
   }, [menuOpen, closeMenu])
 
   return (
-    <header className={`site-header${onHero && !menuOpen ? ' is-on-hero' : ''}`}>
+    <header className={`site-header${onHero && !menuOpen ? ' is-on-hero' : ''}${menuOpen ? ' is-menu-open' : ''}`}>
       <a className="skip-link" href="#main">Skip to content</a>
       <div className="wrap header-row">
         <Link href="/" className="brand" aria-label={`${brandName} home`}>
