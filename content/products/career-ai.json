@@ -1,0 +1,70 @@
+{
+  "slug": "career-ai",
+  "name": "Zobique Career AI",
+  "logo": "/brand/zobique-mark.png",
+  "category": "AI career intelligence",
+  "oneLiner": "Career guidance, job matching and resume tools for students and early-career professionals.",
+  "audience": "Students, graduates and early-career professionals, plus the universities and placement cells that support them.",
+  "problem": "Students lack a clear way to turn their skills into job-ready outcomes and relevant applications.",
+  "capabilities": [
+    "Job matching",
+    "Resume builder",
+    "ATS checker",
+    "Interview prep",
+    "Career roadmap",
+    "Placement intelligence for institutions"
+  ],
+  "capabilitiesEvidenceId": "career-ai-capabilities",
+  "status": "live",
+  "url": "https://careerai.zobique.com",
+  "ctaLabel": "Open Career AI",
+  "screenshots": [
+    {
+      "src": "/screens/ncs.jpg",
+      "width": 1440,
+      "height": 860,
+      "alt": "Career AI on ncs.zobique.com: a sign-up page with job search, resume builder, ATS checker and career roadmap tools",
+      "caption": "Career AI as deployed for National Career Service users, ncs.zobique.com"
+    }
+  ],
+  "proof": [
+    {
+      "text": "Deployed for National Career Service users at ncs.zobique.com",
+      "evidenceId": "ncs-deployment",
+      "href": "/case-studies/career-ai-ncs"
+    },
+    {
+      "text": "Featured in India Today",
+      "evidenceId": "india-today",
+      "href": "https://www.indiatoday.in/education-today/how-i-made-it/story/how-a-btech-student-turned-friends-career-questions-into-the-ai-startup-zobique-2949089-2026-07-16"
+    }
+  ],
+  "labsNote": null,
+  "order": 1,
+  "capabilityDetails": [
+    {
+      "title": "Job matching",
+      "detail": "Ranks openings against your profile, skills and preferences."
+    },
+    {
+      "title": "Resume builder",
+      "detail": "Builds an ATS-friendly resume from your details in minutes."
+    },
+    {
+      "title": "ATS checker",
+      "detail": "Checks a resume against applicant tracking systems before you send it."
+    },
+    {
+      "title": "Interview prep",
+      "detail": "Practice for the role you want, with feedback on your answers."
+    },
+    {
+      "title": "Career roadmap",
+      "detail": "Lays out the skills and steps toward a target role."
+    },
+    {
+      "title": "Placement intelligence",
+      "detail": "Helps universities and placement cells see student readiness."
+    }
+  ]
+}

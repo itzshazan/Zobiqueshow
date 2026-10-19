@@ -1,0 +1,25 @@
+{
+  "meta": {
+    "title": "Contact Zobique",
+    "description": "Start a project with Zobique Labs, get help with a Zobique product, or reach Zobique about partnerships, press and careers."
+  },
+  "heading": "Contact",
+  "intro": "Tell us what you need and we'll point you to the right team.",
+  "routes": [
+    { "label": "Start a project", "body": "A workflow you want AI to handle? Zobique Labs takes it from here.", "href": "https://labs.zobique.com/contact", "kind": "labs" },
+    { "label": "Product support", "body": "Questions about Career AI or Voicenity are answered on each product's site.", "href": "/products", "kind": "products" },
+    { "label": "Everything else", "body": "Partnerships, institutions, press and careers. Use the form below.", "href": "#contact-form", "kind": "form" }
+  ],
+  "form": {
+    "heading": "Send us a message",
+    "reasons": [
+      { "value": "partnership", "label": "Partnership or institution" },
+      { "value": "press", "label": "Press" },
+      { "value": "careers", "label": "Careers" },
+      { "value": "other", "label": "Something else" }
+    ],
+    "success": "Thanks — your message is with us. We reply from contact@zobique.com, usually within two working days.",
+    "error": "Your message didn't send. Please try again, or email contact@zobique.com directly.",
+    "rateLimited": "You've sent a few messages in a short time. Please wait a few minutes and try again."
+  }
+}

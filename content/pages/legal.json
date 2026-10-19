@@ -1,0 +1,54 @@
+{
+  "privacy": {
+    "meta": { "title": "Privacy — Zobique", "description": "How zobique.com handles personal information." },
+    "heading": "Privacy",
+    "updated": "16 Oct 2026",
+    "draftNotice": "Draft for legal review. This page covers zobique.com only. Career AI and Voicenity have their own policies on their sites.",
+    "sections": [
+      {
+        "heading": "What this covers",
+        "body": "This notice covers zobique.com, the website of Zobique Private Limited. Zobique Career AI (careerai.zobique.com), Voicenity (voicenity.zobique.com) and Zobique Labs (labs.zobique.com) publish their own policies."
+      },
+      {
+        "heading": "What we collect",
+        "body": "If you use the contact form we receive your name, email address, organisation (optional), the reason you chose and your message. Our hosting provider also keeps standard server logs, such as IP addresses and request times, for security and to limit abuse."
+      },
+      {
+        "heading": "How we use it",
+        "body": "We use contact form details only to reply to you and to keep a record of the conversation. We do not sell personal information or use it for advertising."
+      },
+      {
+        "heading": "Analytics and cookies",
+        "body": "zobique.com does not set analytics or advertising cookies at launch. If that changes, we will ask for your consent first where the law requires it and update this page."
+      },
+      {
+        "heading": "Your choices",
+        "body": "To see, correct or delete what you sent us, email contact@zobique.com."
+      }
+    ]
+  },
+  "terms": {
+    "meta": { "title": "Terms — Zobique", "description": "Terms for using zobique.com." },
+    "heading": "Terms",
+    "updated": "16 Oct 2026",
+    "draftNotice": "Draft for legal review. These terms cover zobique.com only. Each product has its own terms on its site.",
+    "sections": [
+      {
+        "heading": "About this site",
+        "body": "zobique.com is run by Zobique Private Limited. It describes the company, its products and Zobique Labs. Using a product is governed by that product's own terms."
+      },
+      {
+        "heading": "Content",
+        "body": "We try to keep everything on this site accurate and current. Product descriptions summarise what each product does today; the product's own site is the reference."
+      },
+      {
+        "heading": "Trademarks",
+        "body": "Zobique, Zobique Labs, Zobique Career AI and Voicenity are names used by Zobique Private Limited. Other names belong to their owners and appear only to describe real work or deployments."
+      },
+      {
+        "heading": "Contact",
+        "body": "Questions about these terms: contact@zobique.com."
+      }
+    ]
+  }
+}

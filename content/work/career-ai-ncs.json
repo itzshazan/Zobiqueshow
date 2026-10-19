@@ -1,0 +1,65 @@
+{
+  "slug": "career-ai-ncs",
+  "title": "Career AI, deployed for National Career Service users",
+  "outcome": "Zobique's own career tools run for users of India's national employment platform.",
+  "client": "National Career Service (NCS)",
+  "owner": "zobique",
+  "context": "National Career Service (NCS) is India's national platform connecting job seekers and employers. Zobique Career AI is deployed for NCS users at ncs.zobique.com.",
+  "problem": "Job seekers need help turning skills into job-ready applications.",
+  "built": "Career AI job search, resume builder, ATS checker and roadmap, with their own sign-in.",
+  "components": [
+    {
+      "name": "Job search",
+      "detail": "Matches a user's profile to relevant openings."
+    },
+    {
+      "name": "Resume builder",
+      "detail": "Builds an ATS-friendly resume from the user's details."
+    },
+    {
+      "name": "ATS checker",
+      "detail": "Checks a resume against applicant tracking systems before it is sent."
+    },
+    {
+      "name": "Career roadmap",
+      "detail": "Lays out the skills and steps toward a target role."
+    }
+  ],
+  "flow": [
+    "Signs in at ncs.zobique.com",
+    "Builds a resume",
+    "Checks it for ATS",
+    "Gets matched roles and a roadmap"
+  ],
+  "result": "Live at ncs.zobique.com for NCS users.",
+  "resultDefinition": "Status checked 16 Oct 2026; no usage numbers until measured.",
+  "evidenceIds": [
+    "ncs-deployment"
+  ],
+  "canonicalUrl": null,
+  "liveUrl": "https://ncs.zobique.com",
+  "logo": null,
+  "consent": true,
+  "screenshots": [
+    {
+      "src": "/screens/ncs-platform.jpg",
+      "width": 1920,
+      "height": 1080,
+      "alt": "Zobique on the National Career Service platform: NCS job listings with skill-match scores, a 'Skill Match Analysis' panel powered by Zobique, and the 'Skillpowered by Zobique' link in the NCS menu",
+      "caption": "Zobique features inside the National Career Service portal"
+    },
+    {
+      "src": "/screens/ncs.jpg",
+      "width": 1440,
+      "height": 860,
+      "alt": "ncs.zobique.com homepage: 'Find your dream job. Build your future.' with tools for job search, resume building, ATS checking and career roadmaps",
+      "caption": "The Career AI home page at ncs.zobique.com"
+    }
+  ],
+  "cta": {
+    "label": "See Career AI",
+    "href": "/products/career-ai"
+  },
+  "order": 1,
+  "eyebrow": "Government-facing deployment"
+}
