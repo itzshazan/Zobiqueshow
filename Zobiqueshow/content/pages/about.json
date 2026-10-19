@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "title": "About Zobique",
+    "description": "Zobique is an AI company from India that builds its own AI products and, through Zobique Labs, engineers AI systems for businesses."
+  },
+  "heading": "About Zobique",
+  "story": [
+    "Zobique is an AI company from India. We build and run our own AI products, and through Zobique Labs we engineer AI systems that do real work inside other businesses.",
+    "Our first product, Zobique Career AI, helps students and early-career professionals turn their skills into job-ready applications. It is deployed for National Career Service users at ncs.zobique.com. Our second, Voicenity, is a voice agent that calls and qualifies sales leads in Hinglish and English; it is in early access."
+  ],
+  "storyEvidenceIds": [
+    "ncs-deployment"
+  ],
+  "connection": {
+    "heading": "How products and Labs connect",
+    "body": "Running our own products teaches us what it takes to keep AI working in a real operation: matching, generating documents, talking to people at scale. Zobique Labs brings that into client systems. When we solve the same problem for several clients, it can become reusable product capability."
+  },
+  "founder": {
+    "heading": "Who's behind it"
+  },
+  "press": {
+    "heading": "Press",
+    "items": [
+      {
+        "outlet": "India Today",
+        "title": "How answering friends' career questions led me to build an AI startup in college",
+        "date": "16 Jul 2026",
+        "href": "https://www.indiatoday.in/education-today/how-i-made-it/story/how-a-btech-student-turned-friends-career-questions-into-the-ai-startup-zobique-2949089-2026-07-16",
+        "evidenceId": "india-today"
+      }
+    ]
+  },
+  "entity": {
+    "heading": "Company details"
+  }
+}

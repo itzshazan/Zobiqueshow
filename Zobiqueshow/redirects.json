@@ -1,0 +1,21 @@
+{
+  "_readme": "Career AI migration map (brief section J). Applied only when ENABLE_MIGRATION_REDIRECTS=true. Turn it on in the same deploy that switches zobique.com to the parent site, and only after careerai.zobique.com is live with identical paths. Query strings are preserved automatically.",
+  "careerAiOrigin": "https://careerai.zobique.com",
+  "toCareerAi": [
+    "/product/:path*",
+    "/pricing",
+    "/university",
+    "/sign-up/:path*",
+    "/sign-up",
+    "/sign-in/:path*",
+    "/sign-in",
+    "/dashboard/:path*",
+    "/dashboard"
+  ],
+  "renamed": [
+    { "source": "/privacy-policy", "destination": "https://careerai.zobique.com/privacy-policy" },
+    { "source": "/terms-and-conditions", "destination": "https://careerai.zobique.com/terms-and-conditions" },
+    { "source": "/about-us", "destination": "/about" }
+  ],
+  "todo": "Crawl the current zobique.com and its sitemap.xml (Phase 0) and add every remaining app route here before cut-over."
+}

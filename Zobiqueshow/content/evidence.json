@@ -1,0 +1,107 @@
+[
+  {
+    "id": "ncs-deployment",
+    "claim": "Zobique Career AI is deployed for National Career Service users at ncs.zobique.com",
+    "source": "https://ncs.zobique.com/",
+    "status": "verified",
+    "note": "Wording approved by the founder ('Deployed for NCS users'). Naming the ministry is not approved."
+  },
+  {
+    "id": "india-today",
+    "claim": "Featured in India Today, 16 Jul 2026",
+    "source": "https://www.indiatoday.in/education-today/how-i-made-it/story/how-a-btech-student-turned-friends-career-questions-into-the-ai-startup-zobique-2949089-2026-07-16",
+    "status": "verified",
+    "note": "Article read 17 Oct 2026 (via a text reader; the site blocks direct fetching). First-person 'How I Made It' piece by Rishab Chhetri, headline: 'How answering friends' career questions led me to build an AI startup in college'. Its 'Government of India' wording for NCS is not approved, so the site does not quote it."
+  },
+  {
+    "id": "career-ai-capabilities",
+    "claim": "Career AI: job matching, resume builder, ATS checker, interview prep, career roadmap, placement intelligence",
+    "source": "https://ncs.zobique.com/ and https://www.zobique.com/",
+    "status": "verified",
+    "note": "Listed as verified capabilities in brief section G."
+  },
+  {
+    "id": "voicenity-capabilities",
+    "claim": "Voicenity: Hinglish + English, 5 industry playbooks, no-code setup with in-browser testing, barge-in, multi-agent workspace, per-agent dashboard",
+    "source": "https://voicenity.zobique.com/",
+    "status": "verified",
+    "note": "Checked against the live site 16 Oct 2026. Brief: use, labelled Early access. No adoption numbers."
+  },
+  {
+    "id": "founder",
+    "claim": "Rishab Chhetri, Founder & CEO",
+    "source": "Project Knowledge",
+    "status": "verified",
+    "note": "Bio, headshot and LinkedIn URL still missing."
+  },
+  {
+    "id": "vastav-cost",
+    "claim": "Vastav Intellect: about ₹0.80 estimated cost per researched lead",
+    "source": "https://labs.zobique.com/case-studies",
+    "status": "verified",
+    "note": "Estimate of API cost per lead, not measured savings. Needs client consent for naming. Approved for publishing by the site owner, 17 Oct 2026; confirm client consent is on file."
+  },
+  {
+    "id": "bizowl-platform",
+    "claim": "Bizowl marketplace module shipped on a new modular platform, with data migration",
+    "source": "https://labs.zobique.com/case-studies",
+    "status": "verified",
+    "note": "Needs client consent. Approved for publishing by the site owner, 17 Oct 2026; confirm client consent is on file."
+  },
+  {
+    "id": "ace10x-production",
+    "claim": "Ace10x custom affiliate system live in production, 99% tracking accuracy",
+    "source": "https://labs.zobique.com/case-studies",
+    "status": "conflicting",
+    "note": "Roadmap puts rollout on 1 Nov 2026. Hold until rollout is confirmed and the accuracy figure is defined."
+  },
+  {
+    "id": "labs-50-businesses",
+    "claim": "50+ businesses served",
+    "source": "https://labs.zobique.com/",
+    "status": "unverified",
+    "note": "Undefined. Do not use."
+  },
+  {
+    "id": "ncs-case-metrics",
+    "claim": "NCS: 4.8/5, 65% faster discovery, WCAG 2.1 AAA, zero-hallucination",
+    "source": "Labs NCS case study",
+    "status": "high-risk",
+    "note": "Remove from all sites until evidence exists."
+  },
+  {
+    "id": "career-ai-metrics",
+    "claim": "95% match accuracy, 90% ATS success, 99.9% uptime",
+    "source": "https://www.zobique.com/",
+    "status": "unverified",
+    "note": "Remove, or define and evidence."
+  },
+  {
+    "id": "client-count",
+    "claim": "Number of client systems in production",
+    "source": "Client list (missing)",
+    "status": "unverified",
+    "note": "The proof strip shows this only once a verified client list gives the number."
+  },
+  {
+    "id": "address",
+    "claim": "Manav Rachna Campus Rd, Sector 43, Faridabad",
+    "source": "zobique.com footer",
+    "status": "published",
+    "note": "Confirm it is a registered or correspondence address."
+  },
+  {
+    "id": "risingstartup-feature",
+    "claim": "Founder feature on Rising Startup (Instagram) about Rishab Chhetri and Zobique",
+    "source": "https://www.instagram.com/p/DcQyVxXEktV/",
+    "status": "verified",
+    "note": "Post read 17 Oct 2026 (@risingstartup); caption names Zobique and Rishab Chhetri. Its 'Government of India' wording is not approved, so the site uses its own line and does not quote the caption."
+  },
+  {
+    "id": "startupbyvstdy-feature",
+    "claim": "Founder feature on Startup By Vstdy (Instagram) about Rishab Chhetri and Zobique, 20 Aug 2026",
+    "source": "https://www.instagram.com/p/DcQ1OqmD_-s/",
+    "status": "verified",
+    "note": "Post read 17 Oct 2026 (@startupbyvstdy); caption names Zobique and Rishab Chhetri, supported by Manav Rachna. Its 'Government of India' wording is not approved, so the site does not quote the caption."
+  }
+]
